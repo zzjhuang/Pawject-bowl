@@ -1,0 +1,196 @@
+  .about {
+        margin-top: 7vh;
+        margin-bottom: 2vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 5vh 2vw;
+        gap: 2rem;
+      }
+
+      .main {
+        padding: 5vw;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 2rem;
+        max-width: 1921px;
+        width: 100%;
+        margin: auto;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .main_text {
+        flex: 1 1 45%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        /* min-width: 300px; */
+        padding: 1vw;
+        margin-inline: 3vw;
+      }
+
+      .title h1 {
+        font-size: clamp(1.5rem, 4vw, 2.5rem);
+        font-weight: bold;
+        color: #444;
+        line-height: 1.5;
+      }
+.txt{
+    margin-block: 3vh;
+}
+      .txt p {
+        display: flex;
+        font-size: clamp(1rem, 2.5vw, 1.3rem);
+        color: #666;
+        line-height: 1.7;
+        letter-spacing: 1px;
+        justify-content: flex-start; 
+        text-align: justify; /* 讓文字左右平均對齊 */
+  text-justify: inter-ideograph; /* 對齊中文段落更自然 */
+      }
+      .title .t1 {
+  text-align: left;
+  align-self: flex-start;
+  width: 100%;
+}
+
+.title .t2 {
+  text-align: right;
+  align-self: flex-end;
+  width: 100%;
+}
+
+
+
+      .drawingLeaf {
+        position: absolute;
+        top: -20px;
+        left: -50px;
+        width: 60px;
+        transform: rotate(1deg);
+      }
+
+      .drawingLeaf img {
+        width: 280px;
+        height: auto;
+        position: absolute;
+        right: -88vh;
+        top: -16vh;
+        transform: rotate(346deg);
+      }
+
+      .drawingPaw2 {
+        position: absolute;
+        bottom: -13px;
+        right: -43px;
+        width: 80px;
+        transform: rotate(2deg);
+      }
+
+      .drawingPaw2 img {
+        width: 250px;
+        height: auto;
+        position: absolute;
+        right: 66vh;
+        top: -8vh;
+      }
+
+      .video {
+        flex: 1 1 45%;
+        min-width: 300px;
+        padding: 3vw;
+      }
+
+      .video video {
+        width: 100%;
+        height: auto;
+        border-radius: 32px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      /* RWD 手機版調整 */
+      @media (max-width: 768px) {
+        .main {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .drawingLeaf,
+        .drawingPaw2 {
+          display: none;
+        }
+      }
+ section.ourstory {
+  margin-block: 0vh;
+  display: flex;
+  justify-content: center;
+  padding: 3vh 2vw;
+  /* background-color: #ffffe7; */
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  position: relative;
+}
+
+.ourstory-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 區塊整體置中 */
+  gap: 1.5rem;
+}
+
+.ourstory-items h3 {
+  font-size: clamp(1.5rem, 3.2vw, 2rem);
+  font-weight: bold;
+  color: #7A6F46;
+  text-align: center;
+  line-height: 2;
+  margin-block: 9vh;
+}
+
+.ourstory-items p {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  color: #666;
+  line-height: 1.7;
+  letter-spacing: 1px;
+  text-align: justify; /* 文字左右分散對齊 */
+  text-justify: inter-ideograph;
+  width: 100%;
+  margin: 1vh auto;}
+.bgfoodleft,.bgfoodright{
+    position: absolute;
+}
+
+
+.bgfoodleft{
+    position: absolute;
+    left: -23px;
+    top: 108vh;
+    width: 100px;
+}
+.bgfoodright{
+    position: absolute;
+    right: 0;
+    bottom: -96vh;
+}
+.bgfoodleft img,.bgfoodright img{
+    width: 320px;
+    height: auto;
+}
+.ourstory-items > p:first-of-type {
+font-size: clamp(1rem, 2.5vw, 1.2rem);
+  color: #666;
+  line-height: 1.7;
+  letter-spacing: 1px;
+  text-justify: inter-ideograph;
+  width: 100%;
+  margin: 1vh ;
+    text-align: center;
+
+}

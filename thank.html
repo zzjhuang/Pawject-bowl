@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link href="./reset.css" rel="stylesheet" />
+    <link href="reveal.css" rel="stylesheet" />
+    <link href="bgmod.css" rel="stylesheet" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background-color: #ffffff;
+        font-family: Jua, Arial, "Kiwi Maru", "Noto Sans TC";
+        overflow-x: hidden;
+      }
+      p {
+        margin-bottom: 2px !important;
+        letter-spacing: 1px !important;
+        line-height: clamp(1.3rem, 6vw, 2.3rem) !important;
+      }
+      .thank {
+        width: 100%;
+        margin: 14vh auto 4vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+        margin-bottom: 2px !important;
+        letter-spacing: 1px !important;
+        line-height: clamp(1.3rem, 6vw, 2.3rem) !important;
+      }
+      .circle {
+        position: relative;
+      }
+      .circle .txt {
+        bottom: 10%;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+
+      h2 {
+        font-size: clamp(1.5rem, 2vw + 1rem, 3.5rem);
+        margin-top: 3.5vh;
+        margin-bottom: 1vh;
+        text-align: center;
+        color: #7a6f46;
+      }
+      .hint {
+        display: flex;
+        width: 100%;
+        max-width: 1200px;
+        margin: 2vh auto;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+      }
+      .hint > p {
+        text-align: center;
+      }
+      .info-item {
+        background-color: #ffffe7;
+        border-radius: 32px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        display: flex;
+        width: 100%;
+        max-width: 1200px;
+        margin: 2vh auto;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        padding: 5vh;
+        padding-block: 10vh;
+      }
+      .btn-item {
+        display: flex;
+        width: 100%;
+        max-width: 1200px;
+        margin: 2vh auto;
+        flex-direction: row;
+        align-content: center;
+        align-items: center;
+        justify-content: space-around;
+      }
+      input[type="button"] {
+        margin-block: 1vh;
+        background-color: #fcfcc7;
+        width: 300px;
+        padding-block: 2vh;
+        padding-inline: 4vh;
+        border: none;
+      }
+      input[type="button"]:first-child {
+        background-color: rgb(231, 231, 231);
+      }
+      input[type="button"]:hover {
+        background-color: #dbf0da;
+      }
+      .remind {
+        display: flex;
+        width: 100%;
+        max-width: 1200px;
+        margin: 3vh auto;
+        flex-direction: row;
+        align-content: center;
+        align-items: center;
+        justify-content: space-around;
+      }
+      .container {
+        margin-top: 7vh;
+        margin-bottom: 7vh;
+        margin-inline: auto;
+        position: relative;
+        z-index: 1;
+        max-width: 1200px;
+        width: 100%;
+      }
+      .container > .txt > p {
+        padding: 1vh;
+      }
+
+      .map {
+        padding: 1vh;
+        border-radius: 32px;
+        overflow: hidden;
+      }
+      .mapbox {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+      }
+      .txt > p {
+        text-align: center;
+      }
+       .drawingdog2{
+  
+position: absolute;
+    right: 4vw;
+    top: 62vh;
+    z-index: -1;
+ }
+ .bgfoodleft{
+    position: absolute;
+    left: -23px;
+    top: 106vh;
+    width: 100px;
+}
+    </style>
+  </head>
+  <body>
+    <div id="header-container"></div>
+    <div class="bgcolormod">
+      <div class="bgcmod-01">
+        <img src="asset/bgdrawing/bgcm-l2.svg" alt="" />
+      </div>
+      <div class="bgcmod-02">
+        <img src="asset/bgdrawing/bgmodright3.svg" alt="" />
+      </div>
+           <div class="drawingdog2 reveal">
+    <img src="asset/bgdrawing/drawingdog2.png" alt="">
+</div>
+ <div class="bgfoodleft reveal">
+        <img src="asset/bgdrawing/bgfoodleft.png" alt="a food pic" />
+      </div>
+</div> 
+    </div>
+
+    <div class="thank reveal">
+      <div class="circle">
+        <img src="asset/icon/thankdog.png" alt="" />
+        <div class="txt">
+          <h3>訂位成功!</h3>
+        </div>
+      </div>
+    </div>
+
+    <section class="information">
+      <div class="hint">
+        <p>
+          OO先生您好<br />
+          您已完成訂位<br />
+          訂位資訊:<br />
+        </p>
+      </div>
+      <div class="info-warp">
+        <div class="info-item">
+          <div class="date"><h2>2025年5月15日 星期五</h2></div>
+          <div class="time"><h2>20:00</h2></div>
+          <div class="peonum"><h4>2位大人1位兒童</h4></div>
+        </div>
+        <div class="btn-item">
+          <input type="button" value="取消訂位" />
+          <input type="button" value="傳送訂位資訊至電子信箱" />
+
+          <input type="button" value="編輯訂位" />
+        </div>
+        <div class="remind">
+          <p>
+            如需更改訂位，請於用餐前一日在線上進行更改。<br />
+            如有其他訂位問題，請直接聯繫我們 02-1234-5678
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="container">
+      <div class="mapbox">
+        <div class="txt">
+          <p>
+            聯絡資訊 地址：台北市××區××路×號<br />
+            電話：02-1234-5678<br />
+            Email：hello@pawjectbowl.com<br />
+            營業時間：週二～週日 11:00–20:00（週一公休）
+          </p>
+
+          <div class="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.0072355325433!2d121.50815634947584!3d25.067743896203517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a938fec3c965%3A0x96cc72737a03be4a!2zMTAz5Y-w5YyX5biC5aSn5ZCM5Y2A5rCR5peP6KW_6LevMjgy5be3MjUg5qiTM-iZnw!5e0!3m2!1szh-TW!2stw!4v1748700340562!5m2!1szh-TW!2stw"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="footer-container"></div>
+
+    <script src="load-components.js"></script>
+    <script src="revealElements.js"></script>
+  </body>
+</html>

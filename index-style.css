@@ -1,0 +1,513 @@
+  * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background-color: #ffffe7;
+        font-family: Jua, Arial, "Kiwi Maru", "Noto Sans TC";
+        overflow-x: hidden;
+      }
+      p {
+        margin-bottom: 2px !important;
+        letter-spacing: 1px !important;
+        line-height: clamp(
+          1.3rem,
+          6vw,
+          2.3rem
+        ) !important; /* è¡Œè·ï¼š24px ~ 40px */
+      }
+
+      .bgimg {
+        width: 100%;
+        position: absolute;
+      }
+
+      .heroBanner {
+        margin-bottom: 4rem;
+        width: 100%;
+        position: relative;
+      }
+
+     .banner-img {
+        position: relative;
+        display: flex;
+        align-content: space-between;
+        justify-content: space-around;
+      }
+
+
+      .mask-img {
+        display: flex;
+
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow-x: hidden;
+        z-index: 5;
+        pointer-events: none;
+      }
+
+      .masked-image {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        object-fit: cover;
+        display: block;
+        line-height: 0;
+      }
+
+      .heroBanner .text {
+        border: #2e7dc1;
+        position: absolute;
+        bottom: 15%;
+         justify-content: center;
+  text-align: center;
+        color: #ffffff;
+        font-size: 2.9vw;
+        z-index: 8;
+        line-height: 1.6;
+
+        /* VW = (pt Ã— 1.333) Ã· viewportWidth Ã— 100 */
+      }
+
+      @media screen and (min-width: 1200px) {
+        .text {
+          font-size: 42px;
+        }
+      }
+
+      .shadowmask {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 60%;
+        background: linear-gradient(
+          to top,
+          rgba(80, 66, 11, 100),
+          rgba(186, 179, 101, 0)
+        );
+        z-index: 4;
+      }
+
+      .brandMessage {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+      }
+      .intro-banner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        width: 100%;
+      }
+      .drawingLeaf {
+        position: absolute;
+        top: 20px;
+        right: 150px;
+        width: 200px; 
+        height: auto;
+        z-index: 0;
+      }
+
+      .drawingLeaf img {
+        width: 100%;
+        height: auto;
+        transform: rotate(20deg);
+      }
+
+      .intro-banner .title {
+        font-size: 2.5vw;
+        margin-bottom: 3.8rem;
+        text-align: center;
+        flex-wrap: wrap;
+      }
+
+      .brandMessage .bimg {
+        width: 100%;
+        max-width: 1200px;
+        height: auto;
+        aspect-ratio: 1200 / 522.176;
+        border-radius: 32px;
+        overflow: hidden;
+      }
+
+      .bimg img {
+        width: 100%;
+        display: block;
+      }
+
+      .intro-aboutme {
+        display: flex;
+        flex: 1;
+        margin: 5% auto;
+        justify-content: center;
+        align-items: center;
+        width: 1200px;
+        gap: 20px;
+
+        font-size: 100%;
+        font: inherit;
+        justify-content: space-around;
+        padding: 10px 0px;
+        vertical-align: baseline;
+      }
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+      }
+      .intro-txt .intro-img {
+        padding-inline: 20px;
+      }
+
+      .intro-aboutmeal {
+        position: relative;
+
+        display: flex;
+        flex: 1;
+        margin: 5% auto;
+        justify-content: center;
+        align-items: center;
+        width: 1200px;
+        gap: 20px;
+
+        font-size: 100%;
+        font: inherit;
+        justify-content: space-around;
+        padding: 10px 0px;
+        vertical-align: baseline;
+      }
+      .intro-img2 {
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+      .intro-img2-right,
+      .intro-img2-left {
+        width: 80%;
+        height: auto;
+        padding: 10px;
+        border-radius: 32px;
+        overflow: hidden;
+        position: relative;
+      }
+      .intro-img2-right {
+        margin-top: 8%;
+      }
+      .intro-img2-left {
+        margin-bottom: 8%;
+      }
+
+      .intro-img2 img {
+        border-radius: 32px;
+      }
+
+      .intro-txt2 {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+  .drawingKinoko {
+        position: absolute;
+        left: -31vh;
+        height: auto;
+        z-index: -1;
+        pointer-events: none;
+      }
+
+      .readmoreBtn {
+        margin-top: auto;
+        margin-left: auto;
+        position: absolute;
+        bottom: -2vw;
+        right: 0%;
+        background-color: #8aba65;
+        border-radius: 32px;
+        padding: 10px 10px 10px 15px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        width: max-content;
+        margin-top: 5%;
+        justify-content: flex-end;
+        z-index: 3;
+      }
+
+      .readmoreBtn span {
+        padding: 10px 10px 10px 30px;
+        color: #fff;
+      }
+
+      .iconOrder,
+      .iconOrderHover {
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        transform: translateY(-50%);
+        width: 24px;
+        height: 24px;
+        transition: opacity 0.5s ease;
+        user-select: none;
+        pointer-events: none;
+      }
+
+      .iconOrderHover {
+        opacity: 0;
+      }
+
+      .readmoreBtn:hover {
+        background-color: #fcfcc7;
+      }
+
+      .readmoreBtn:hover span {
+        color: #7a6f46;
+      }
+
+      .readmoreBtn:hover .iconOrder {
+        opacity: 0;
+      }
+
+      .readmoreBtn:hover .iconOrderHover {
+        opacity: 1;
+      }
+
+      .menu {
+        width: 100%;
+        margin-inline: auto;
+        margin-top: 8vh;
+        margin-bottom: 12vh;
+        padding: 10px 0;
+        z-index: 5;
+        position: relative;
+      }
+
+      .menutxt {
+        font-size: 32px;
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .menucard-list {
+        width: 1200px;
+        display: flex;
+        justify-content: space-around;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-top: 5vh;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .menucard {
+        flex: 1;
+        max-width: 270px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        text-align: center;
+        transition: transform 0.3s ease;
+        z-index: 3;
+        background-color: #707070;
+      }
+
+      .menucard:hover {
+        transform: translateY(-5px);
+      }
+
+      .menu-card-img img {
+        width: 100%;
+        height: auto;
+        display: block;
+        max-height: 330px;
+      }
+
+      .menu-card-txt {
+        margin: 20px 0;
+        font-size: 20px;
+        font-weight: 500;
+        color: #ffffff;
+      }
+
+      .drawingFish {
+        position: absolute;
+        right: 100px;
+        left: 0;
+
+        height: auto;
+        z-index: 0;
+        pointer-events: none;
+      }
+      .drawingPaw {
+        position: absolute;
+        top: 20px;
+        right: -16vh;
+        width: 200px;
+        height: auto;
+        z-index: 0;
+        pointer-events: none;
+      }
+           .drawingPaw2 {
+        position: absolute;
+        bottom: -7vh;
+        left: -12vh;
+        height: auto;
+        z-index: 0;
+        pointer-events: none;
+        transform: rotate(15deg);
+      }
+      .drawingC {
+        position: absolute;
+        right: 35vw;
+        height: auto;
+        z-index: 0;
+        pointer-events: none;
+        top: 21vw;
+      }
+
+      .dog-section {
+        width: 100%;
+        max-width: 1920px;
+        display: flex;
+        position: relative;
+        margin-block: 3vh;
+        flex-wrap: wrap;
+        margin-top: 9vw;
+        background-color: white;
+      }
+      .dogbanner {
+        position: relative;
+        display: flex;
+        width: 100%;
+        /* max-width: 1920px; */
+        margin: 0 auto;
+      }
+      .colormod-rg {
+        position: absolute;
+        bottom: -20vw;
+        z-index: 1;
+        pointer-events: none;
+        width: 20px;
+        height: auto;
+        right: 25vw;
+      }
+      .dogbanner > img {
+        width: 100%;
+        height: auto;
+      }
+      .colormod-ly {
+        position: absolute;
+        left: 0;
+        top: 30vh;
+        z-index: 1;
+        pointer-events: none;
+        width: 20px;
+      }
+      .runningdog-video {
+        width: 100%;
+        height: auto;
+        object-fit: cover; 
+        display: block;
+      }
+
+      .video-mask {
+        max-height: 50vh;
+        width: 100%; 
+        max-width: 1920px; 
+        margin: 0 auto;
+        aspect-ratio: 16 / 9; 
+        overflow: hidden; 
+        
+        position: relative;
+      }
+      .drawingshiba {
+        position: absolute;
+        right: 0;
+        top: 47vh;
+        z-index: 0;
+      }
+      .dogManager {
+        display: flex;
+        position: relative;
+        flex-wrap: wrap;
+        margin-inline: auto;
+        margin-block: 16vh;
+        justify-content: center;
+        width: 100%;
+        max-width: 1200px;
+        z-index: 2;
+      }
+      .dogManager.title{
+        padding: 5px;
+      }
+      .dogManager-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 3vh auto;
+        width: 100%;
+        padding: 10px;
+        height: 300px; /* åŠ ä¸Šé€™è¡Œï¼ */
+      }
+
+      .dogManager-img,
+      .dogManager-txt {
+        display: flex;
+        box-sizing: border-box;
+        text-align: justify;
+        gap: 20px;
+        margin-block: 3vh;
+        position: relative;
+      }
+      .dogManager-txt {
+        flex: 4;
+      }
+      .dogManager-img {
+        flex: 6;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+      }
+      .dogManager-img img {
+        width: auto;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .dogcard-wraps {
+        width: 100%;
+        max-width: 1920px;
+        height: clamp(350px, 53vh, 550px);
+        background-color: #dbf0da;
+        justify-content: center;
+      }
+      .dogcard-list {
+        margin: auto;
+        flex-wrap: wrap;
+        display: flex;
+        width: 100%;
+        max-width: 1200px;
+      }
+      .photowall{
+         display: flex;
+         justify-content: flex-end;
+         width: 100%;
+         max-width: 1920px;
+         padding: 0 2rem; /* ä¾‹å¦‚å·¦å³å„æœ‰ 2rem ç©ºé–“ */
+         box-sizing: border-box; /* ç¢ºä¿ padding ä¸å½±éŸ¿å¯¦éš›å¯¬åº¦ */
+   margin-top: 4vh;      }
+
+      .spcolor{
+color: #8aba65 !important;
+}
+/* 物件下墜效果 */

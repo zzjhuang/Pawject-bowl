@@ -1,0 +1,129 @@
+     * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background-color: #ffffe7;
+        font-family: Jua, Arial, "Kiwi Maru", "Noto Sans TC";
+        overflow-x: hidden;
+      }
+      p {
+        margin-bottom: 2px !important;
+        letter-spacing: 1px !important;
+        line-height: clamp(
+          1.3rem,
+          6vw,
+          2.3rem
+        ) !important; /* è¡Œè·ï¼š24px ~ 40px */
+      }
+   
+   .header {
+        width: 100%;
+   
+        margin: 0;
+        background-color: #ffffe7;
+        font-family: Jua, Arial, "Kiwi Maru", "Noto Sans TC";
+        overflow-x: hidden;
+      
+      }
+
+      .header * {
+        color: #000;
+        font-size: 1.25 rem;
+        font-style: normal;
+      }
+
+      nav {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      .logo {
+        height: 80px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 40%;
+        gap: 12px;
+      }
+
+      .ulLeft {
+        margin-right: auto;
+      }
+
+      .ulRight {
+        margin-left: auto;
+      }
+
+      .orderBtn {
+        position: relative;
+        /* 讓子元素絕對定位參考 */
+        background-color: #8aba65;
+        border-radius: 32px;
+        padding: 6px 10px 6px 15px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        width: max-content;
+        /* 讓按鈕寬度符合內容 */
+      }
+
+      .orderBtn span {
+        padding-left: 30px;
+        color: #fff;
+      }
+
+      .iconOrder,
+      .iconOrderHover {
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        /* 跟 padding-left 一致，讓圖片靠左 */
+        transform: translateY(-50%);
+        width: 24px;
+        /* 依你的圖大小調整 */
+        height: 24px;
+        transition: opacity 0.5s ease;
+        user-select: none;
+        pointer-events: none;
+        /* 讓滑鼠事件不影響圖片 */
+      }
+
+      .iconOrderHover {
+        opacity: 0;
+      }
+
+      .orderBtn:hover {
+        background-color: #fcfcc7;
+      }
+
+      .orderBtn:hover span {
+        color: #7a6f46;
+      }
+
+      .orderBtn:hover .iconOrder {
+        opacity: 0;
+      }
+
+      .orderBtn:hover .iconOrderHover {
+        opacity: 1;
+      }

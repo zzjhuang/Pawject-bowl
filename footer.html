@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jua&family=Kiwi+Maru&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .footer {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+        font-family: Jua, Arial, "Kiwi Maru", "Noto Sans TC";
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .footer-top {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0 5px;
+        text-align: right;
+        position: relative;
+        top: 8px;
+        z-index: 2;
+      }
+
+      .footer-top .footer-icon-dog {
+        display: inline-block;
+        width: auto;
+        height: auto;
+      }
+
+      .footer-bottom {
+        padding: 1vh;
+        width: 100%;
+        height: auto;
+        justify-items: center;
+        display: flex;
+        background-color: #b4d699;
+        gap: 5px;
+      }
+
+      .footer-bottom-left,
+      .footer-bottom-center,
+      .footer-bottom-right {
+        flex: 1;
+        align-items: center;
+        padding: 5px 20px;
+        display: flex;
+      }
+
+      .footer-bottom-left {
+        justify-content: space-around;
+      }
+
+      .footer-bottom-center {
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap;
+        flex-direction: column;
+      }
+
+      .footer-bottom-right {
+        justify-content: flex-end;
+      }
+
+      .footer-bottom-right .footer-social-icon {
+        padding: 0 5px;
+      }
+
+      .footer-bottom-right .footer-top-icon {
+        padding-left: 20px;
+      }
+
+      .footer-bottom-right img {
+        width: 40px;
+        height: 40px;
+      }
+
+      .footer-logo {
+        margin-block: 1vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="footer">
+      <div class="footer-top">
+        <div class="footer-icon-dog">
+          <img src="asset/icon/3dogicon.svg" alt="3 dogs" />
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-left">
+          <div class="footer-link-about"><a href="about.html">關於我們</a></div>
+
+          <div class="footer-link-menu"><a href="menu.html">菜單</a></div>
+          <div class="footer-link-doglist">
+            <a href="doglist.html">狗狗名單</a>
+          </div>
+          <div class="footer-link-faq"><a href="FAQ.html">常見問題</a></div>
+          <div class="footer-link-contact">
+            <a href="contact.html">聯絡我們</a>
+          </div>
+        </div>
+        <div class="footer-bottom-center">
+          <div class="footer-logo">
+            <a href="index.html">
+              <img src="asset/icon/logo.svg" alt="logo"
+            /></a>
+          </div>
+          <div class="footer-copyright">
+            © 2025 PAWJECT BOWL. All rights reserved.
+          </div>
+        </div>
+        <div class="footer-bottom-right">
+          <div class="footer-social-icon">
+            <img src="asset/icon/lineicon.svg" alt="lineicon" />
+          </div>
+          <div class="footer-social-icon">
+            <img src="asset/icon/fbicon.png" alt="fbicon" />
+          </div>
+          <div class="footer-social-icon">
+            <img src="asset/icon/igicon.svg" alt="igicon" />
+          </div>
+          <div class="footer-top-icon">
+            <img src="asset/icon/topicon.svg" alt="topicon" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

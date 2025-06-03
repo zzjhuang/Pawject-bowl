@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link href="./reset.css" rel="stylesheet" />
+    <link href="reveal.css" rel="stylesheet" />
+    <link href="bgmod.css" rel="stylesheet" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background-color: #ffffe7;
+        font-family: Jua, Arial, "Kiwi Maru", "Noto Sans TC";
+        overflow-x: hidden;
+      }
+      p {
+        margin-bottom: 2px !important;
+        letter-spacing: 1px !important;
+        line-height: clamp(1.3rem, 6vw, 2.3rem) !important;
+      }
+ .top {
+        display: flex;
+        max-width: 1200px;
+        width: 100%;
+        margin: 12vh auto 3vh;
+      }
+      .btn-item {
+        padding-inline: 20vh;
+        display: flex;
+        width: 100%;
+        max-width: 1200px;
+        margin: 2vh auto;
+        flex-direction: row;
+      }
+      .Btn {
+        margin: auto;
+        background-color: #8aba65;
+        border-radius: 32px;
+        margin: auto;
+        background-color: #8aba65;
+        border-radius: 32px;
+        padding: 10px 10px 10px 15px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        margin-top: 5%;
+        justify-content: flex-end;
+        z-index: 3;
+        position: relative;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        margin-top: 5%;
+        justify-content: flex-end;
+        z-index: 3;
+        position: relative;
+      }
+      .Btn span {
+        padding: 10px 10px 10px 30px;
+        color: #fff;
+      }
+
+      .iconOrder,
+      .iconOrderHover {
+        position: absolute;
+        margin-left: 1.3vh;
+        left: 0;
+        width: 24px;
+        height: 24px;
+        transition: opacity 0.5s ease;
+        user-select: none;
+        pointer-events: none;
+      }
+
+      .iconOrderHover {
+        opacity: 0;
+      }
+
+      .Btn:hover {
+        background-color: #fcfcc7;
+      }
+
+      .Btn:hover span {
+        color: #7a6f46;
+      }
+
+      .Btn:hover .iconOrder {
+        opacity: 0;
+      }
+
+      .Btn:hover .iconOrderHover {
+        opacity: 1;
+      }
+      .Q {
+        position: absolute;
+        left: 0;
+        bottom: 19vh;
+      }
+.information .divider {
+  text-align: center;
+}
+
+.information .divider hr{
+  width: 100%;
+}
+.dogicon {
+
+position: absolute;
+margin-top: 0.5rem;
+height: auto;
+right: 0;
+bottom: 0vh
+}
+.divider {
+    position: relative;
+}
+
+section.quelist {
+    width: 100%;
+    margin: 5vh auto;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+}
+h2{
+font-size: clamp(1.5rem, 2vw + 1rem, 3.5rem);
+    margin-top: 3.5vh;
+    margin-bottom:5vh;
+    text-align: center;
+}
+.que {
+    display: flex;
+    justify-content: flex-start;
+    margin: 1vh auto;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    position: relative;
+    
+}
+.plusicon{
+  position: absolute;
+  right:0
+
+}
+.q {
+    margin: 1vh;
+}
+h3{
+  font-size: 1.5rem;
+  margin-bottom: 2px !important;
+        letter-spacing: 1px !important;
+        line-height: clamp(1.3rem, 6vw, 2.3rem) !important;
+}
+.Qicon img{
+  width: 30vh;
+  position: absolute;
+  left: 10vh;
+  top: 17vh;
+}
+.drawingLeaf{
+ position: absolute;
+ top: 25vh;
+ right: 9vh;
+ width: 200px;
+ height: auto;
+ z-index: 0;
+ }
+
+    </style>
+  </head>
+  <body>
+    <div id="header-container"></div>
+    <div class="bgcolormod">
+      <div class="bgcmod-05">
+        <img src="asset/bgdrawing/bgcm-l2.svg" alt="" />
+      </div>
+      <div class="bgcmod-06">
+        <img src="asset/bgdrawing/bgcmodr4.svg" alt="" />
+      </div>
+      <div class="Qicon">
+        <img src="asset/icon/Q.svg" />
+      </div>
+       <div class="drawingLeaf reveal">
+          <img src="asset/bgdrawing/drawingleaf.png" alt="" />
+        </div>
+    </div>
+
+    <div class="top">
+      <div class="btn-item">
+        <div class="Btn">
+          <img src="asset/icon/Vector.png" class="iconOrder" />
+          <img src="asset/icon/Vector_hover.png" class="iconOrderHover" />
+          <span>常見問題</span>
+        </div>
+
+        <div class="Btn">
+          <img src="asset/icon/Vector.png" class="iconOrder" />
+          <img src="asset/icon/Vector_hover.png" class="iconOrderHover" />
+          <span>領養須知</span>
+        </div>
+
+        <div class="Btn">
+          <img src="asset/icon/Vector.png" class="iconOrder" />
+          <img src="asset/icon/Vector_hover.png" class="iconOrderHover" />
+          <span>領養流程</span>
+        </div>
+      </div>
+    </div>
+
+
+    <section class="quelist">
+    <div class="title"><h2>常見問題</h2></div>
+     <div class="divider">
+        <hr/>
+        <img class="dogicon" src="asset/icon/3dogicon.svg" />
+      </div>
+    </div>
+
+    <div class="que">
+      <div class="q"><img src="asset/icon/Qicon.svg" alt="" /></div>
+      <h3>你們的狗狗可以被認養嗎？要怎麼認養呢？</h3>    
+      <div class="plusicon"><img src="asset/icon/plusicon.svg" alt="" /></div>
+     
+    </div> <hr/>
+    <div class="que">
+      <div class="q"><img src="asset/icon/Qicon.svg" alt="" /></div>
+      <h3>來店消費是否會強迫認養或捐款？</h3>
+      <div class="plusicon"><img src="asset/icon/plusicon.svg" alt="" /></div>
+          
+    </div>
+    <hr/>
+    <div class="que">
+      <div  class="q"><img src="asset/icon/Qicon.svg" alt="" /></div>
+      <h3>可以帶自己的狗來用餐嗎？</h3>
+      <div class="plusicon"><img src="asset/icon/plusicon.svg" alt="" /></div>
+    </div>
+    <hr/>
+    <div class="que">
+      <div  class="q"><img src=asset/icon/Qicon.svg alt="" /></div>
+      <h3>你們的食物可以提供給狗狗吃嗎</h3>
+      <div class="plusicon"><img src="asset/icon/plusicon.svg" alt="" /></div>
+      
+    </div>  
+      <hr/>
+    <div class="que">
+      <div class="q"><img src=asset/icon/Qicon.svg alt="" /></div>
+      <h3>如果我想幫自己的狗狗找認養人，你們有提供送養協助嗎？</h3>
+      <div class="plusicon"><img src="asset/icon/plusicon.svg" alt="" /></div>
+         
+    </div> 
+    <hr/>
+    <div class="que">
+      <div class="q"><img src=asset/icon/Qicon.svg alt="" /></div>
+      <h3>餐點都是低熱量嗎？吃得飽嗎？</h3>
+      <div class="plusicon"><img src="asset/icon/plusicon.svg" alt="" /></div>
+        
+    </div>  
+    <hr/>
+  </section>
+    <div id="footer-container"></div>
+
+    <script src="load-components.js"></script>
+    <script src="revealElements.js"></script>
+  </body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+<link rel="stylesheet" href="flatpickr.min.css">
+
+    <link href="./reset.css" rel="stylesheet" />
+    <link href="reveal.css" rel="stylesheet" />
+    <link href="bgmod.css" rel="stylesheet" />
+    <link href="orderformstyle.css" rel="stylesheet" />
+    
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background-color: #ffffff;
+        font-family: Jua, Arial, "Kiwi Maru", "Noto Sans TC";
+        overflow-x: hidden;
+      }
+      p {
+        margin-bottom: 2px !important;
+        letter-spacing: 1px !important;
+        line-height: clamp(1.3rem, 6vw, 2.3rem) !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header-container"></div>
+    <div class="bgcolormod">
+      <div class="bgcmod-01">
+        <img src="asset/bgdrawing/bgcm-l2.svg" alt="" />
+      </div>
+         <div class="bgcmod-02">
+        <img src="asset/bgdrawing/bgmodright3.svg" alt="" />
+      </div>
+      <div class="drawingdog2 reveal">
+    <img src="asset/bgdrawing/drawingdog2.png" alt="">
+</div>
+ <div class="bgfoodleft reveal">
+        <img src="asset/bgdrawing/bgfoodleft.png" alt="a food pic" />
+      </div>
+    </div>
+    <main>
+      <div class="banner">
+        <img src="asset/indexpic/orderbanner.png" alt="" />
+      </div>
+      <div class="title"><h2>PAWJECT Bowl 預約</h2></div>
+      <section class="mainbox">
+      <div class="knowhow">
+        <div class="sectitle">
+          <h3>預約須知</h3>
+        
+          <h4>📌 基本訂位須知</h4>
+          <p>
+            預約人數限制 線上預約限 1～6 位，超過請加入官方
+            LINE，由專人協助安排最合適的位置與時段。
+          </p>
+          <h4>攜帶寵物的規範</h4>
+          <p>
+            我們歡迎寵物同行，但為保障所有人與毛孩的安全，請配合以下事項：<br />
+            入店寵物須定期施打心絲蟲預防藥，由飼主自行確認
+            基於空間與安全考量，暫不接待特殊犬種（如比特犬等）與大型犬，敬請見諒
+          </p>
+          
+          <h4>貼心提醒</h4>
+          <p>
+            每一項規則，都是為了讓人與動物共處的空間更友善、安全。
+            無論您是否與寵物同行，我們都誠摯歡迎您來坐坐 🐾🌷
+            如有其他疑問或需求，歡迎提前告知，我們會盡力協助。期待與您見面，共度一段美好時光
+            🕊️✨
+          </p>
+        </div>
+        <div class="knowhow pic">
+          <img src="asset/indexpic/knowhowpic.png" alt="" />
+        </div>
+      </div>
+      <section class="order-form">
+        <form action="/submit-reservation" method="post" id="reservationForm">
+          <h3>選擇訂位時段</h3>
+          <!-- 成人與兒童人數 -->
+           <div class="peoplenum">
+            <label>用餐人數</label><br>
+          <label for="adults">成人人數：
+          <select id="adults" name="adults">
+            <option value="1">1 位</option>
+            <option value="2">2 位</option>
+            <option value="3">3 位</option>
+            <option value="4">4 位</option>
+            <option value="5">5 位</option>
+            <option value="6">6 位</option>
+            <option value="7">7 位</option>
+
+          </select>
+</label>
+
+          <label for="children">兒童人數：
+          <select id="children" name="children">
+            <option value="0">0 位</option>
+            <option value="1">1 位</option>
+            <option value="2">2 位</option>
+            <option value="3">3 位</option>
+          </select>
+</label>
+</div>
+<div class="date">
+  <label for="selectedDate">用餐日期：</label>
+<input type="text" id="datePicker" readonly placeholder="請選擇日期" />
+
+<!-- 月曆容器，預設隱藏 -->
+<div id="calendarContainer" style="display: none;"></div>
+
+</div>
+<div class="time">
+          <!-- 時段按鈕選擇 -->
+          <label>用餐時段：</label>
+          <div class="time-slots" id="timeSlots">
+            <!-- JavaScript 會生成按鈕 -->
+          </div>
+          <input type="hidden" name="time" id="selectedTime" />
+</div>
+          <input type="submit" value="提交訂位" />
+        </form>
+      </section>
+    </main>
+    <div id="footer-container"></div>
+
+<script src="load-components.js"></script>
+<script src="revealElements.js"></script>
+<script src="orderform.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script>
+  const input = document.getElementById("datePicker");
+  const calendarContainer = document.getElementById("calendarContainer");
+
+  let calendarInstance;
+
+  input.addEventListener("click", () => {
+    // 顯示月曆容器
+    calendarContainer.style.display = "block";
+
+    // 如果還沒初始化，就初始化 flatpickr
+    if (!calendarInstance) {
+      calendarInstance = flatpickr(calendarContainer, {
+        inline: true, // 不要彈出式，內嵌模式
+        minDate: "today",
+        locale: "zh_tw",
+        showMonths:2,
+        onChange: function(selectedDates, dateStr) {
+          input.value = dateStr;
+          calendarContainer.style.display = "none"; // 選完日期後收起
+        },
+      });
+    }
+  });
+
+  // 點擊其他地方收起月曆
+  document.addEventListener("click", (e) => {
+    if (
+      !input.contains(e.target) &&
+      !calendarContainer.contains(e.target)
+    ) {
+      calendarContainer.style.display = "none";
+    }
+  });
+
+
+    document.getElementById("reservationForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    window.location.href = "order2.html"
+    
+  });
+</script>
+  </body>
+</html>

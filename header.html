@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jua&family=Kiwi+Maru&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: Jua, Arial, "Kiwi Maru", "Noto Sans TC";
+      }
+
+      .header {
+        padding: 2vh;
+        display: flex;
+        width: 100%;
+        height: auto;
+        align-items: center;
+        justify-content: space-between;
+        margin: auto;
+        overflow-x: hidden;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 999;
+      }
+      .left-link,
+      .center-link,
+      .right-link {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+      .header * {
+        color: #000;
+        font-size: 24px;
+        font-style: normal;
+        margin: 0;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      .header-link-about,
+      .header-link-menu,
+      .header-link-doglist,
+      .header-link-faq,
+      .header-link-contact {
+        padding: 0 10px;
+        /* flex: 1; */
+      }
+
+      .header-logo {
+        padding: 0 15px;
+      }
+
+      .header-order-btn {
+        position: fixed;
+        right: 0.8vh;
+        top: 2.8vh;
+        background-color: #8aba65;
+        border-radius: 32px;
+        padding: 10px 10px 10px 15px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        width: max-content;
+        z-index: 99999;
+      }
+
+      .header-order-btn span {
+        padding-left: 30px;
+        color: #fff;
+      }
+
+      .header-icon-order,
+      .header-icon-order-hover {
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        transform: translateY(-50%);
+        width: 24px;
+        height: 24px;
+        transition: opacity 0.5s ease;
+        user-select: none;
+        pointer-events: none;
+      }
+
+      .header-icon-order-hover {
+        opacity: 0;
+      }
+
+      .header-order-btn:hover {
+        background-color: #fcfcc7;
+      }
+
+      .header-order-btn:hover span {
+        color: #7a6f46;
+      }
+
+      .header-order-btn:hover .header-icon-order {
+        opacity: 0;
+      }
+
+      .header-order-btn:hover .header-icon-order-hover {
+        opacity: 1;
+      }
+      .header-link-order {
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="left-link">
+        <div class="header-link-about">
+          <a href="about.html">關於 Pawject Bowl</a>
+        </div>
+        <div class="header-link-menu"><a href="menu.html">菜單</a></div>
+        <div class="header-link-doglist">
+          <a href="doglist.html">狗狗名單</a>
+        </div>
+      </div>
+      <div class="center-link">
+        <div class="header-logo">
+          <a href="index.html"> <img src="asset/icon/logo.svg" alt="logo" /></a>
+        </div>
+      </div>
+      <div class="right-link">
+        <div class="header-link-faq"><a href="FAQ.html">常見問題</a></div>
+        <div class="header-link-contact">
+          <a href="contact.html">聯絡我們</a>
+        </div>
+        <div class="header-link-order">立即預約</div>
+      </div>
+      <div class="header-order-btn">
+        <a href="ordr.html">
+          <img src="asset/icon/Vector.png" class="header-icon-order" />
+          <img
+            src="asset/icon/Vector_hover.png"
+            class="header-icon-order-hover"
+          />
+          <span>立即預約</span>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

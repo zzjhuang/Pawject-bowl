@@ -1,0 +1,74 @@
+.footer{
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-wrap: wrap;
+
+
+            margin:0;
+            padding: 0;
+            font-family:Jua,Arial,"Kiwi Maru","Noto Sans TC";
+            justify-content: space-between;
+            align-items: center;
+        }
+        .top{
+            width: 100%;
+            height: auto;
+            margin: 0;
+            /* overflow-x: hidden; */
+            padding:0 5px;
+            text-align: right;
+            
+            position: relative;
+            top: 8px;
+            z-index:2;
+        }
+       .top .dog3{
+        display: inline-block;
+        width: auto;
+        height: auto;
+        
+       }
+       .bottom{
+        width: 100%;
+        height: auto;
+        justify-items: center;
+        display: flex;
+        background-color: #B4D699;
+        gap:5px
+       }
+       .bottom1,.bottom2,.bottom3{
+        flex: 1;
+        align-items: center;
+        
+        padding: 5px 20px;
+        display: flex;
+
+    
+       }
+     
+       .bottom1{
+        justify-content: space-between;
+        
+       }
+    .bottom2{
+        display: flex;     justify-content: center;
+        flex-wrap: wrap;
+
+    }
+       .bottom3{
+      
+        justify-content: flex-end;
+        
+       }
+       .bottom3>.icon{
+        padding: 0 5px 0 5px;
+       }
+       .bottom3 .topicon{
+        padding-left: 20px;
+       }
+       .bottom3 img{
+        width: 40px;
+        height: 40px;
+       }
+        
