@@ -34,7 +34,7 @@ position: absolute;
   height: 100%;
   object-fit: cover;
 height: 600px; /* ✅ 加這行！ */
-
+z-index:-999
 }
 
 .mask-img {
@@ -45,7 +45,7 @@ height: 600px; /* ✅ 加這行！ */
         left: 0;
         width: 100%;
         overflow-x: hidden;
-        z-index: 0;
+        z-index: -200;
         pointer-events: none;
       }
 

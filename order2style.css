@@ -137,5 +137,11 @@ position: absolute;
     position: absolute;
     left: -23px;
     top: 106vh;
-    width: 100px;
+}
+input[type="radio"]{
+  margin-left: 1vh;
+}
+input[type="tel"] {
+    width: 30vh;
+    margin-right: 1vh;
 }
