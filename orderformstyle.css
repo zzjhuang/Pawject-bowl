@@ -143,3 +143,11 @@ position: absolute;
     top: 106vh;
     width: 100px;
 }
+
+input[type="submit"] {
+  margin-block: 1vh;
+    background-color: #b4d699;
+
+      padding: 1vh;
+    padding-inline: 4vh;
+}
