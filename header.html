@@ -14,7 +14,6 @@
       * {
         margin: 0;
         padding: 0;
-        font-family: Jua, Arial, "Kiwi Maru", "Noto Sans TC";
       }
 
       .header {
@@ -30,6 +29,7 @@
         right: 0;
         top: 0;
         z-index: 999;
+        font-family: Jua, Arial, "Kiwi Maru", "Noto Sans TC" !important;
       }
       .left-link,
       .center-link,
@@ -59,13 +59,37 @@
         /* flex: 1; */
       }
 
+      /* .header-link-about::after,
+      .header-link-menu::after,
+      .header-link-doglist::after,
+      .header-link-faq::after,
+      .header-link-contact::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        background-color: #333;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s ease;
+      }
+      .header-link-about:hover::after,
+      .header-link-menu:hover::after,
+      .header-link-doglist:hover::after,
+      .header-link-faq:hover::after,
+      .header-link-contact:hover::after {
+        transform: scaleX(1);
+      } */
+
       .header-logo {
         padding: 0 15px;
       }
 
       .header-order-btn {
         position: fixed;
-        right: 0.8vh;
+        right: 1vh;
         top: 2.8vh;
         background-color: #8aba65;
         border-radius: 32px;

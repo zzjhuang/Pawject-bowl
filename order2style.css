@@ -6,6 +6,7 @@
   margin-top: 15vh;
   margin-inline: auto;
   position: relative;
+  
 }
 
 .information .text {
@@ -34,7 +35,9 @@
 .information .divider hr {
   width: 100%;
 }
-
+.txt{
+  font-size: 1.3rem;
+}
 .dogicon {
 
 position: absolute;
@@ -70,15 +73,30 @@ bottom: 0;
     gap: 5px;
     padding: 3vh;
     padding-inline: 8vh;
+    appearance: none;
+    border: 0.1rem solid #8bc34a;
+
+
 }
-form.personal-information>div {
-    margin-block: 5vh;
+input[type="text"],input[type="tel"],input[type="email"]{
+ width: 30vh;
+  padding: 0.6rem 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  box-sizing: border-box;
 }
+
+input:focus{
+  outline: none;
+border:2px solid #8bc34a;
+}
+
 .graytxt{
    color: rgb(180, 180, 180);
 }
 h2{
-font-size: clamp(1.5rem, 2vw + 1rem, 3.5rem);
+font-size: 2rem;
     margin-top: 3.5vh;
     margin-bottom:5vh;
     text-align: center;
@@ -92,18 +110,30 @@ font-size: clamp(1.5rem, 2vw + 1rem, 3.5rem);
     padding: 1vh;
 }
 input[type="submit"] {
-  margin-block: 1vh;
-    background-color: #b4d699;
+  margin-block: 3vh;
+  font-size: 1.3rem;
+  background-color: #fcfcc7;;
+  padding: 1vh;
+  padding-inline: 3vh;
+  border-radius:32px;
+  border: none;
 
-      padding: 1vh;
-    padding-inline: 4vh;
 }
+
 
 input[type="button"] {
-    padding: 1vh;
-    padding-inline: 4vh;
+   /* margin-block: 0; */
+   font-size: 1.3rem;
+   background-color: #dfdfdf;
+   padding: 1vh;
+   padding-inline: 3vh;
+   border-radius:32px;
+   border: none;
 }
-
+ input[type="button"]:hover,input[type="submit"]:hover {
+        background-color: #dbf0da;
+        transform: translateY(-5px);
+      }
 input.name {
     width: 30vh;
 }
@@ -117,9 +147,10 @@ input[type="text"] {
     margin-right: 1vh;
 }
 
-label {
-    margin-right: 2vh;
-    /* margin-inline: 1vh; */
+label{
+  display: inline-block;
+  margin-block: 1vh;
+  font-size: 1.3rem;
 }
 
 span.graytxt {
@@ -133,15 +164,78 @@ position: absolute;
     top: 62vh;
     z-index: -1;
  }
- .bgfoodleft{
-    position: absolute;
-    left: -23px;
-    top: 106vh;
-}
+
 input[type="radio"]{
   margin-left: 1vh;
+  margin-right:0.5vh;
 }
+
 input[type="tel"] {
     width: 30vh;
     margin-right: 1vh;
 }
+
+input[type="checkbox"] {
+    margin-right: 1vh;
+}
+
+.error-message {
+  display: none;
+  color: red;
+  margin-left: 8px;
+  font-size: 0.9rem;
+}
+
+.required{
+   color: red;
+  margin-left: 8px;
+  font-size: 0.9rem;
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+
+/* 卡片本體 */
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  width: 80%;
+  max-width:65vw;
+  border-radius: 32px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* 關閉按鈕 */
+.close {
+  position: absolute;
+  right: 12px;
+  top: 8px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #888;
+}
+
+.close:hover {
+  color: #000;
+}
+
+/* 動畫 */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+

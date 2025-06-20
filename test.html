@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>可滑動卡片區塊</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .dogcard-list {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scroll-padding-inline: 1rem;
+        gap: 1rem;
+        padding: 1rem;
+        cursor: grab;
+      }
+
+      .dogcard-list.active {
+        cursor: grabbing;
+        user-select: none;
+      }
+
+      .dogcard {
+        flex: 0 0 calc(100% - 2rem);
+        scroll-snap-align: center;
+        background: pink;
+        height: 200px;
+        border-radius: 12px;
+        min-width: 90%;
+      }
+
+      @media (min-width: 769px) {
+        .dogcard-list {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+          cursor: default;
+        }
+
+        .dogcard {
+          min-width: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="dogcard-list">
+      <div class="dogcard">卡片1</div>
+      <div class="dogcard">卡片2</div>
+      <div class="dogcard">卡片3</div>
+    </div>
+
+    <script>
+      const slider = document.querySelector(".dogcard-list");
+
+      let isDown = false;
+      let startX;
+      let scrollLeft;
+
+      slider.addEventListener("mousedown", (e) => {
+        isDown = true;
+        slider.classList.add("active");
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+      });
+
+      slider.addEventListener("mouseleave", () => {
+        isDown = false;
+        slider.classList.remove("active");
+      });
+
+      slider.addEventListener("mouseup", () => {
+        isDown = false;
+        slider.classList.remove("active");
+      });
+
+      slider.addEventListener("mousemove", (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - slider.offsetLeft;
+        const walk = (x - startX) * 1;
+        slider.scrollLeft = scrollLeft - walk;
+      });
+    </script>
+  </body>
+</html>

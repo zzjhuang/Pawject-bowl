@@ -36,3 +36,16 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(section);
   });
 });
+
+
+// const ansrevealElements = document.querySelectorAll('.ansreveal');
+
+// const observer2 = new IntersectionObserver(entries => {
+//   entries.forEach(entry => {
+//     if (entry.isIntersecting) {
+//       entry.target.classList.add('active');  // 進入畫面加上 active 觸發動畫
+//     }
+//   });
+// }, { threshold: 0.05 }); // 當元素有5%進入視窗時觸發
+
+// ansrevealElements.forEach(el => observer.observe(el));

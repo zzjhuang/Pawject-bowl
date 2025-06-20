@@ -49,12 +49,15 @@
 
 .bgcmod-01 {
   left: 0;
-  top: 64vh;
+  top: 0vh;
 }
 
 .bgcmod-02 {
   right: 0;
-  top: 84vh;
+  top: 80vh;
+}
+.bgcmod-02 img {
+    width: 25vw;
 }
 
 .bgcmod-03 {
@@ -81,63 +84,15 @@
   right: 0vh;
   top: 40vh;
   }
-@media (max-width: 1024px) {
 
-.bgcmod-02 {
-    right: 0;
-    top: 160vh;}
-
-
+   .bgfoodleft{
+    position: absolute;
+    left: -9vh;
+    top: 45vh;
+    width: 100px;
 }
- @media (max-width: 768px) {
-  
-h1,h2,h3,h4,.title{
- font-family: Jua, Arial, "思源黑體" "Noto Sans TC";
- 
-      }
-      p,span,form {
-        margin-bottom: 2px !important;
-        letter-spacing: 1px!important;
-        line-height: 2rem !important;
-        font-family: Jua, Arial, "思源黑體", "Noto Sans TC";
-        font-size: 1.25rem; 
-
-      }
-
- body {
-        margin: 0;
-        background-color: #ffffff;
-        overflow-x: hidden;
-        display: flex;
-          flex-direction: column;
-      }
-
-
-.bgcmod-01,
-.bgcmod-02,
-.bgcmod-03 ,
-.bgcmod-04,
-.bgcmod-05,
-.bgcmod-06{
-opacity: 0.6;
-
-
-
- }
-
-
-.bgcmod-03{
-    right: 0;
-  top: 288vh;
-  width: 180px;
-  height: auto;
- 
-}
-.bgcmod-04{
-  left: -11vh;
-  top: 330vh;
-}
-
-
-
+@media screen and (max-width: 1680px) {
+  .bgfoodleft {
+    opacity: 0.3 !important;;
+  }
 }

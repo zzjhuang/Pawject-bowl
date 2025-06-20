@@ -64,40 +64,39 @@
   width: 100%;
 }
 
+ .drawingPaw2 {
+position: absolute;
+    bottom: 35%;
+    right: 85%;
+    width: 200px;
+    transform: rotate(2deg);
+      }
 
+      .drawingPaw2 img {
+        width: 100%;
+        height: auto;
+        position: absolute;
+      
+      }
 
       .drawingLeaf {
-        position: absolute;
-        top: -20px;
-        left: -50px;
-        width: 60px;
+           position: absolute;
+        top: -20%;
+        left: 91%;
+        width: 200px;
         transform: rotate(1deg);
       }
 
       .drawingLeaf img {
-        width: 280px;
+        width: 100%;
         height: auto;
         position: absolute;
-        right: -88vh;
-        top: -16vh;
-        transform: rotate(346deg);
+ 
       }
+   
 
-      .drawingPaw2 {
-        position: absolute;
-        bottom: -13px;
-        right: -43px;
-        width: 80px;
-        transform: rotate(2deg);
-      }
 
-      .drawingPaw2 img {
-        width: 250px;
-        height: auto;
-        position: absolute;
-        right: 66vh;
-        top: -8vh;
-      }
+     
 
       .video {
         flex: 1 1 45%;
@@ -112,18 +111,7 @@
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       }
 
-      /* RWD 手機版調整 */
-      @media (max-width: 768px) {
-        .main {
-          flex-direction: column;
-          align-items: center;
-        }
-
-        .drawingLeaf,
-        .drawingPaw2 {
-          display: none;
-        }
-      }
+   
  section.ourstory {
   margin-block: 0vh;
   display: flex;
@@ -165,6 +153,8 @@
   margin: 1vh auto;}
 .bgfoodleft,.bgfoodright{
     position: absolute;
+      z-index: -1;
+
 }
 
 
@@ -172,7 +162,8 @@
     position: absolute;
     left: -23px;
     top: 108vh;
-    width: 100px;
+    width: 100px
+    ;
 }
 .bgfoodright{
     position: absolute;
@@ -194,3 +185,46 @@ font-size: clamp(1rem, 2.5vw, 1.2rem);
     text-align: center;
 
 }
+
+
+   @media (max-width: 1024px) {
+
+
+      .drawingLeaf {
+        width: 160px;
+        position: absolute;
+        top: -20%;
+        left: 95%;
+        transform: rotate(1deg);
+      }
+      .drawingPaw2 {
+position: absolute;
+        bottom: 45%;
+        right: 90% !important;
+        width: 160px;
+        transform: rotate(2deg);
+
+      }
+
+ .bgfoodleft,.bgfoodright{
+  opacity: 0.3;
+ }
+
+      }
+
+
+   /* RWD 手機版調整 */
+      @media (max-width: 768px) {
+      
+        .main {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .drawingLeaf,
+        .drawingPaw2,
+        .bgfoodleft,
+        .bgfoodright {
+          display: none;
+        }
+      }

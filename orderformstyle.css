@@ -1,29 +1,36 @@
   body {
         font-family: sans-serif;
         line-height: 1.6;
+        font-family: Arial, "思源黑體", "Noto Sans TC";
       }
     
 
       .time-slots {
+        width: 100%;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-        max-width: 500px;
-        gap: 10px;
+        gap: 9px;
         margin-top: 10px;
+        margin-inline: 10px;
       }
+
+      .time-slot:hover{
+  background-color:#dbf0da;
+  
+}
 
       .time-slot {
         text-align: center;
         padding: 8px 2vw;
-        background-color: #f0f0f0;
+        background-color: #ffffff;
         border: 1px solid #ccc;
-        border-radius: 5px;
+        border-radius: 32px;
         cursor: pointer;
         user-select: none;
       }
 
       .time-slot.selected {
-        background-color: #8bc34a;
+        background-color:#8bc34a;
         color: white;
         border-color: #689f38;
       }
@@ -31,7 +38,7 @@
       /* 限制每行最多 5 個 */
       @media (min-width: 600px) {
         .time-slots {
-          grid-template-columns: repeat(5, 1fr);
+          grid-template-columns: repeat(5, 0fr);
         }
       }
 
@@ -44,7 +51,7 @@ main{
 margin: 10vh auto;
 }
 .title {
-  font-size: clamp(1.5rem, 2vw + 1rem, 3.5rem);
+font-size: 2rem;
   margin: 3.5vh auto;}
 
 .mainbox{
@@ -79,27 +86,35 @@ margin: 10vh auto;
 
 }
 .order-form form {
+  border-radius: 5px;
+  appearance: none;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap:30px
+  /* align-items: center; */
 }
 .peoplenum,.date,.time{
   margin-bottom: 2vh;
 }
 .peoplenum>label {
     margin-right: 2vh;
+    font-size: 1.3rem;
+   width: 46%;
 }
 label{
+  display: inline-block;
   margin-block: 1vh;
+  font-size: 1.3rem;
+}
+.note{
+  font-size: 1rem;
+  color: #aaa;;
 }
 .peoplenum>select {
-    width: 100px;
+    width: 100%;
 }
 
 #calendarContainer {
   margin-top: 8px;
-  border: 1px solid #ccc;
   padding: 10px;
   width: fit-content;
   background: white;
@@ -108,6 +123,7 @@ label{
 }
 select{
   width: 180px;
+  font-size: 1.3rem;
 }
 
 h3{
@@ -123,11 +139,19 @@ input[type="submit"]{
 
 }
 h4 {
+    /* FONT-WEIGHT: 200; */
     margin-block: 1.5vh;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    font-weight: 200;
 }
-.knowhow pic{
+.knowhowpic{
   margin-block: 5px;
+  border-radius: 32px;
+  overflow: hidden;
+}
+.knowhowpic img{
+  width: 100%;
+  height: auto;
 }
 
  .drawingdog2{
@@ -137,17 +161,39 @@ position: absolute;
     top: 62vh;
     z-index: -1;
  }
- .bgfoodleft{
-    position: absolute;
-    left: -23px;
-    top: 106vh;
-    width: 100px;
-}
+
 
 input[type="submit"] {
-  margin-block: 1vh;
-    background-color: #b4d699;
+  margin-block: 3vh;
+  font-size: 1.3rem;
+  background-color: #fcfcc7;;
+  padding: 1vh;
+  padding-inline: 3vh;
+  border-radius:32px;
+  border: none;
 
-      padding: 1vh;
-    padding-inline: 4vh;
+}
+input[type="button"]:hover,input[type="submit"]:hover{
+        background-color: #dbf0da;
+        transform: translateY(-5px);
+      }
+
+      .order-form select,
+.order-form input[type="text"] {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+.limiterror{
+  color:red;
+  font-size: 1rem;
+}
+.error-message {
+  display: none;
+  color: red;
+  margin-left: 8px;
+  font-size: 0.9rem;
 }

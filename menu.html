@@ -6,8 +6,9 @@
     <title>PAWJECT BOWL</title>
     <link href="./reset.css" rel="stylesheet" />
     <link href="reveal.css" rel="stylesheet" />
-    <link href="bgmod.css" rel="stylesheet" />
+
     <link href="menu.css" rel="stylesheet" />
+    <link href="bgmod.css" rel="stylesheet" />
     <style>
       body {
         background-color: white;
@@ -22,6 +23,13 @@
       </div>
       <div class="bgcmod-02">
         <img src="asset/bgdrawing/bgcm-rg02.svg" alt="" />
+      </div>
+
+      <!-- <div class="bgcmod-03">
+        <img src="asset/bgdrawing/bgcm-r1.svg" alt="" />
+      </div> -->
+      <div class="bgcmod-04">
+        <img src="asset/bgdrawing/Ellipse 35.svg" alt="" />
       </div>
       <div class="bgfoodleft reveal">
         <img src="asset/bgdrawing/bgfoodleft.png" alt="a food pic" />
@@ -45,16 +53,36 @@
         <h2>今天吃什麼?</h2>
         <div class="m-list">
           <ul>
-            <li><span class="icon">🍱</span> 健康餐盒</li>
-            <li><span class="icon">🥗</span> 輕食沙拉</li>
-            <li><span class="icon">🧃</span> 飲品</li>
-            <li><span class="icon">🐶</span> 寵物友善食品</li>
+            <li id="menubtn">
+              <span class="icon"
+                ><img src="asset/icon/rice-icon.png" alt=""
+              /></span>
+              健康餐盒
+            </li>
+            <li id="salabtn">
+              <span class="icon"
+                ><img src="asset/icon/sala-icon.png" alt=""
+              /></span>
+              輕食沙拉
+            </li>
+            <li id="drinkbtn">
+              <span class="icon"
+                ><img src="asset/icon/drink-icon.png" alt=""
+              /></span>
+              飲品
+            </li>
+            <li id="dogfoodbtn">
+              <span class="icon"
+                ><img src="asset/icon/sala-icon.png" alt=""
+              /></span>
+              寵物友善食品
+            </li>
           </ul>
         </div>
       </div>
     </section>
 
-    <section class="main-menu">
+    <section class="main-menu reveal">
       <div class="card-list">
         <div class="card">
           <img
@@ -63,10 +91,9 @@
             class="card-image"
           />
           <div class="card-content">
-            <h3 class="card-title">香檸鮭魚蔬菜碗</h3>
+            <h3 class="card-title">椒香舒肥雞胸沙拉</h3>
             <p class="card-desc">
-              富含Omega-3的不飽和脂肪酸，搭配檸檬提香解膩，結合多樣時蔬，營養均衡、抗發炎、助心血管健康。
-              。
+              使用低溫舒肥雞胸，保留高蛋白與嫩口口感，搭配胡椒油醋醬，低脂高飽足，適合運動後補充能量。
             </p>
           </div>
         </div>
@@ -140,9 +167,220 @@
       </div>
     </section>
 
+    <section class="sala-menu reveal">
+      <div class="card-list">
+        <div class="card">
+          <img
+            src="asset/meal list/椒香舒肥雞胸沙拉.png"
+            alt="椒香舒肥雞胸沙拉"
+            class="card-image"
+          />
+          <div class="card-content">
+            <h3 class="card-title">椒香舒肥雞胸沙拉</h3>
+            <p class="card-desc">
+              使用低溫舒肥雞胸，保留高蛋白與嫩口口感，搭配胡椒油醋醬，低脂高飽足，適合運動後補充能量。
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="asset/meal list/泰式青木瓜涼沙拉.png"
+            alt="泰式青木瓜涼沙拉"
+            class="card-image"
+          />
+          <div class="card-content">
+            <h3 class="card-title">泰式青木瓜涼沙拉</h3>
+            <p class="card-desc">
+              清脆青木瓜絲與胡蘿蔔、四季豆、花生融合酸辣醬汁，開胃解膩，富含膳食纖維與維生素C。
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="asset/meal list/花椰蛋白藜麥沙拉.png"
+            alt="花椰蛋白藜麥沙拉"
+            class="card-image"
+          />
+          <div class="card-content">
+            <h3 class="card-title">花椰蛋白藜麥沙拉</h3>
+            <p class="card-desc">
+              藜麥搭配花椰菜、毛豆與溫泉蛋，提供完整植物性蛋白質，低GI高營養，是輕食控熱量首選。
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="asset/meal list/南瓜酪梨堅果沙拉.png"
+            alt="南瓜酪梨堅果沙拉"
+            class="card-image"
+          />
+          <div class="card-content">
+            <h3 class="card-title">南瓜酪梨堅果沙拉</h3>
+            <p class="card-desc">
+              綿密酪梨與香甜烤南瓜，融合核桃與腰果，滿足好油脂需求，飽足又養顏，特別適合下午提神。
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="asset/meal list/豆腐蕎麥和風沙拉.png"
+            alt="豆腐蕎麥和風沙拉"
+            class="card-image"
+          />
+          <div class="card-content">
+            <h3 class="card-title">豆腐蕎麥和風沙拉</h3>
+            <p class="card-desc">
+              冷製蕎麥麵與嫩豆腐、海帶芽搭配胡麻醬，清爽又有日式風味，低碳又富含植物蛋白與膳食纖維。
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="asset/meal list/地中海鷹嘴豆沙拉.png"
+            alt="地中海鷹嘴豆沙拉"
+            class="card-image"
+          />
+          <div class="card-content">
+            <h3 class="card-title">地中海鷹嘴豆沙拉</h3>
+            <p class="card-desc">
+              富含植物性蛋白的鷹嘴豆，結合小黃瓜、番茄、洋蔥與橄欖油檸檬醬，清爽開胃、抗氧化又促進腸道健康。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="drink-menu reveal">
+      <div class="card-list">
+        <div class="card">
+          <img
+            src="asset/meal list/檸檬蜂蜜蘆薈飲.png"
+            alt="檸檬蜂蜜蘆薈飲"
+            class="card-image"
+          />
+          <div class="card-content">
+            <h3 class="card-title">檸檬蜂蜜蘆薈飲</h3>
+            <p class="card-desc">
+              新鮮檸檬汁搭配天然蜂蜜與脆口蘆薈，潤喉又清爽，幫助消化與提升免疫力，是夏季首選飲品。
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="asset/meal list/桂花烏龍冷泡茶.png"
+            alt="桂花烏龍冷泡茶"
+            class="card-image"
+          />
+          <div class="card-content">
+            <h3 class="card-title">桂花烏龍冷泡茶</h3>
+            <p class="card-desc">
+              低溫冷泡的烏龍茶融合淡雅桂花香氣，無糖無負擔，回甘不澀，清新解膩又優雅。
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="asset/meal list/莓果優酪氣泡飲.png"
+            alt="莓果優酪氣泡飲"
+            class="card-image"
+          />
+          <div class="card-content">
+            <h3 class="card-title">莓果優酪氣泡飲</h3>
+            <p class="card-desc">
+              以優格菌發酵製成，搭配藍莓、覆盆子與微氣泡，低糖高益菌，腸胃保健同時享受微酸甜口感。
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="asset/meal list/黑芝麻豆奶拿鐵.png"
+            alt="黑芝麻豆奶拿鐵"
+            class="card-image"
+          />
+          <div class="card-content">
+            <h3 class="card-title">黑芝麻豆奶拿鐵</h3>
+            <p class="card-desc">
+              黑芝麻搭配無糖豆奶打製，濃香滑順、補鈣養膚，是熱飲或冰飲皆宜的高質感植物奶選擇。
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="asset/meal list/飲料紅茶.png"
+            alt="蜜香紅茶"
+            class="card-image"
+          />
+          <div class="card-content">
+            <h3 class="card-title">蜜香紅茶</h3>
+            <p class="card-desc">
+              選用自然發酵的台灣蜜香紅茶，帶有淡雅果香與蜜味，無糖亦甘醇，是解膩與餐後小憩的絕配。
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="asset/meal list/抹茶玄米燕麥飲.png"
+            alt="抹茶玄米燕麥飲"
+            class="card-image"
+          />
+          <div class="card-content">
+            <h3 class="card-title">抹茶玄米燕麥飲</h3>
+            <p class="card-desc">
+              日本抹茶融合炒玄米與燕麥奶，低咖啡因、高飽足，清新中帶點堅果香，溫和醒腦不刺激。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="dog-menu reveal">
+      <div class="card-list">
+        <div class="card">
+          <img
+            src="asset/meal list/雞胸肉南瓜泥狗狗友善餐.png"
+            alt="雞胸肉南瓜泥狗狗友善餐"
+            class="card-image"
+          />
+          <div class="card-content">
+            <h3 class="card-title">雞胸肉南瓜泥狗狗友善餐</h3>
+            <p class="card-desc">
+              低脂舒肥雞胸搭配綿密南瓜泥，富含優質蛋白與β胡蘿蔔素，幫助狗狗消化、護眼又增強免疫力。
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="asset/meal list/雞胸玉米沙拉狗狗友善餐.png"
+            alt="雞胸玉米沙拉狗狗友善餐"
+            class="card-image"
+          />
+          <div class="card-content">
+            <h3 class="card-title">雞胸玉米沙拉狗狗友善餐</h3>
+            <p class="card-desc">
+              水煮雞胸、甜玉米與毛豆組合成營養沙拉，富含蛋白質與膳食纖維，增強體力也顧腸胃，小型犬也能輕鬆入口。
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="asset/meal list/鱸魚地瓜蔬菜狗狗友善餐.png"
+            alt="鱸魚地瓜蔬菜狗狗友善餐"
+            class="card-image"
+          />
+          <div class="card-content">
+            <h3 class="card-title">鱸魚地瓜蔬菜狗狗友善餐</h3>
+            <p class="card-desc">
+              新鮮鱸魚低溫蒸煮搭配地瓜與花椰菜，富含Omega-3與維生素B群，有助毛髮亮澤與皮膚健康，是挑嘴狗也愛的營養便當。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <div id="footer-container"></div>
 
     <script src="load-components.js"></script>
     <script src="revealElements.js"></script>
+    <script src="menubtn.js"></script>
   </body>
 </html>

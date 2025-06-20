@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>PAWJECT BOWL</title>
 <link rel="stylesheet" href="flatpickr.min.css">
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link href="./reset.css" rel="stylesheet" />
     <link href="reveal.css" rel="stylesheet" />
-    <link href="bgmod.css" rel="stylesheet" />
-    <link href="orderformstyle.css" rel="stylesheet" />
     
+    <link href="orderformstyle.css" rel="stylesheet" />
+    <link href="bgmod2.css" rel="stylesheet" />
 
     <style>
       * {
@@ -58,7 +60,7 @@
         <div class="sectitle">
           <h3>預約須知</h3>
         
-          <h4>📌 基本訂位須知</h4>
+          <h4>基本訂位須知</h4>
           <p>
             預約人數限制 線上預約限 1～6 位，超過請加入官方
             LINE，由專人協助安排最合適的位置與時段。
@@ -73,12 +75,12 @@
           <h4>貼心提醒</h4>
           <p>
             每一項規則，都是為了讓人與動物共處的空間更友善、安全。
-            無論您是否與寵物同行，我們都誠摯歡迎您來坐坐 🐾🌷
+            無論您是否與寵物同行，我們都誠摯歡迎您來坐坐 
             如有其他疑問或需求，歡迎提前告知，我們會盡力協助。期待與您見面，共度一段美好時光
-            🕊️✨
+            
           </p>
         </div>
-        <div class="knowhow pic">
+        <div class="knowhowpic">
           <img src="asset/indexpic/knowhowpic.png" alt="" />
         </div>
       </div>
@@ -87,40 +89,42 @@
           <h3>選擇訂位時段</h3>
           <!-- 成人與兒童人數 -->
            <div class="peoplenum">
-            <label>用餐人數</label><br>
+            <label>用餐人數:  <span class="error-message"  id="limitError">請選擇人數</span></label><br>
           <label for="adults">成人人數：
-          <select id="adults" name="adults">
+          <select id="adultInput" name="adults">
+            <option value="0">請選擇</option>
             <option value="1">1 位</option>
             <option value="2">2 位</option>
             <option value="3">3 位</option>
             <option value="4">4 位</option>
             <option value="5">5 位</option>
             <option value="6">6 位</option>
-            <option value="7">7 位</option>
 
           </select>
 </label>
 
           <label for="children">兒童人數：
-          <select id="children" name="children">
-            <option value="0">0 位</option>
-            <option value="1">1 位</option>
-            <option value="2">2 位</option>
-            <option value="3">3 位</option>
+          <select id="childInput" name="children">
+            <option value="0">請選擇</option>
+         
           </select>
 </label>
+
+<div><label class="note">可接受1-6位訂位(含大人與小孩),6位以上請洽官方line ，由專人為您服務。 </label></div>
 </div>
 <div class="date">
-  <label for="selectedDate">用餐日期：</label>
-<input type="text" id="datePicker" readonly placeholder="請選擇日期" />
+  <label for="selectedDate">用餐日期：  <span class="error-message" id="dateError">請選擇日期</span> 
+</label> 
 
-<!-- 月曆容器，預設隱藏 -->
-<div id="calendarContainer" style="display: none;"></div>
+<input type="text" id="datePicker" readonly placeholder="請選擇日期" />
+  <div id="calendarContainer"></div>
 
 </div>
 <div class="time">
           <!-- 時段按鈕選擇 -->
-          <label>用餐時段：</label>
+          <label>用餐時段： <span class="error-message" id="timeError">請選擇時段</span></label>          
+         
+
           <div class="time-slots" id="timeSlots">
             <!-- JavaScript 會生成按鈕 -->
           </div>
@@ -136,47 +140,31 @@
 <script src="revealElements.js"></script>
 <script src="orderform.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="form.js"></script>
 <script>
   const input = document.getElementById("datePicker");
   const calendarContainer = document.getElementById("calendarContainer");
 
   let calendarInstance;
 
-  input.addEventListener("click", () => {
-    // 顯示月曆容器
-    calendarContainer.style.display = "block";
+  document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('calendarContainer').style.display = 'block';
+});
 
-    // 如果還沒初始化，就初始化 flatpickr
-    if (!calendarInstance) {
-      calendarInstance = flatpickr(calendarContainer, {
-        inline: true, // 不要彈出式，內嵌模式
-        minDate: "today",
-        locale: "zh_tw",
-        showMonths:2,
-        onChange: function(selectedDates, dateStr) {
-          input.value = dateStr;
-          calendarContainer.style.display = "none"; // 選完日期後收起
-        },
-      });
-    }
-  });
+flatpickr("#calendarContainer", {
+  inline: true,               
+  minDate: "today",           
+  maxDate:new Date().fp_incr(60),
+    showMonths: 2,            
 
-  // 點擊其他地方收起月曆
-  document.addEventListener("click", (e) => {
-    if (
-      !input.contains(e.target) &&
-      !calendarContainer.contains(e.target)
-    ) {
-      calendarContainer.style.display = "none";
-    }
-  });
+  onChange: function (selectedDates, dateStr) {
+    document.getElementById("datePicker").value = dateStr;
+  }
+});
 
 
-    document.getElementById("reservationForm").addEventListener("submit", function (e) {
-    e.preventDefault();
-    window.location.href = "order2.html"
-    
-  });
+
+
 </script>
   </body>
 </html>

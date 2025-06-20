@@ -44,7 +44,7 @@
    margin-inline: auto;
 }
 .mainbox{
-    padding:  3vw;
+    padding: 1.5vw;
     margin: auto;
     background-color: #fff;
     border-radius: 32pt;
@@ -52,12 +52,12 @@
     align-items: center;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     flex-direction: column;
-        background-color: #fff;
+    background-color: #fff;
     max-width: 1200px;
     width: 100%;
 }
 .txt{
-    margin: auto;
+    margin:1vh auto;
     text-align: center;
     display: flex;
     flex-direction: row;
@@ -67,7 +67,7 @@
 
 .socialmedia{
     display: flex;
-    margin: 20vh auto;
+    margin: 12vh auto 6vh;
 }
 .socialmedia-card{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -82,9 +82,9 @@
     width: 1200px;
 }
 .socialmedia-txt {
- flex: 1 1 auto;  
-    max-width: 100%;  
-    padding-right: 5%; 
+ flex: 1 1 auto;
+ max-width: 100%;
+ padding-right: 5%;
 }
 .socialmedia .title{
       white-space: nowrap;   /* 不換行 */
@@ -130,7 +130,7 @@
    max-width: 100px;
 }
 .link{
-    margin-block: 2vh;
+    margin-block: 5vh;
     padding: 1vw;
     display: flex;
     flex-direction: row;
@@ -143,6 +143,7 @@
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column-reverse;
+    align-items: center;
 }
 
 
@@ -184,4 +185,8 @@
   transform: translateX(0); /* 可以視需要設定一個預設值避免動畫跳動 */
   transition: opacity 0.3s ease-out, transform 0.3s ease-out;
 
+}
+iframe {
+    border-radius: 32px;
+    position: relative;
 }

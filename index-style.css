@@ -7,17 +7,21 @@
       body {
         margin: 0;
         background-color: #ffffe7;
-        font-family: Jua, Arial, "Kiwi Maru", "Noto Sans TC";
         overflow-x: hidden;
+       
+
       }
-      p {
+      h1,h2,h3,h4,.title{
+ font-family: Jua, Arial, "Kiwi Maru", "Noto Sans TC";
+ 
+      }
+      p,span {
         margin-bottom: 2px !important;
         letter-spacing: 1px !important;
-        line-height: clamp(
-          1.3rem,
-          6vw,
-          2.3rem
-        ) !important; /* è¡Œè·ï¼š24px ~ 40px */
+        line-height: 2rem !important; 
+        font-family: Jua, Arial, "思源黑體", "Noto Sans TC";
+        font-size: 1.2rem;;
+
       }
 
       .bgimg {
@@ -61,17 +65,17 @@
       }
 
       .heroBanner .text {
-        border: #2e7dc1;
-        position: absolute;
-        bottom: 15%;
-         justify-content: center;
-  text-align: center;
-        color: #ffffff;
+       position: absolute;
+        bottom: 35%;
+        left: 20%;
+        justify-content: space-between;
+        text-align: center;
+        color: #845151;
         font-size: 2.9vw;
         z-index: 8;
         line-height: 1.6;
 
-        /* VW = (pt Ã— 1.333) Ã· viewportWidth Ã— 100 */
+        align-content: center;
       }
 
       @media screen and (min-width: 1200px) {
@@ -99,6 +103,7 @@
         flex-wrap: wrap;
         justify-content: center;
         width: 100%;
+        z-index: 10
       }
       .intro-banner {
         display: flex;
@@ -110,8 +115,8 @@
       .drawingLeaf {
         position: absolute;
         top: 20px;
-        right: 150px;
-        width: 200px; 
+        right: 5%;
+        width: 200px;
         height: auto;
         z-index: 0;
       }
@@ -211,11 +216,6 @@
         border-radius: 32px;
       }
 
-      .intro-txt2 {
-        display: flex;
-        flex-wrap: wrap;
-      }
-
   .drawingKinoko {
         position: absolute;
         left: -31vh;
@@ -223,12 +223,14 @@
         z-index: -1;
         pointer-events: none;
       }
-
+.intro-txt,.intro-txt2{
+  padding-right:1vh;
+  text-align: justify;
+}
       .readmoreBtn {
         margin-top: auto;
         margin-left: auto;
         position: absolute;
-        bottom: -2vw;
         right: 0%;
         background-color: #8aba65;
         border-radius: 32px;
@@ -240,6 +242,16 @@
         margin-top: 5%;
         justify-content: flex-end;
         z-index: 3;
+        font-size:24px;
+          transition: transform 0.2s ease;
+
+      }
+    .intro-txt2>.readmoreBtn{
+        bottom: 0;
+
+      }
+      .dogManager-txt>.readmoreBtn{
+        bottom: -11vh;
       }
 
       .readmoreBtn span {
@@ -266,6 +278,8 @@
 
       .readmoreBtn:hover {
         background-color: #fcfcc7;
+           transform: translateY(-5px);
+
       }
 
       .readmoreBtn:hover span {
@@ -335,6 +349,10 @@
         font-size: 20px;
         font-weight: 500;
         color: #ffffff;
+      
+      }
+      .menu-card-txt p{
+          letter-spacing:5px;
       }
 
       .drawingFish {
@@ -380,7 +398,7 @@
         position: relative;
         margin-block: 3vh;
         flex-wrap: wrap;
-        margin-top: 9vw;
+        margin-top: 1vw;
         background-color: white;
       }
       .dogbanner {
@@ -487,9 +505,14 @@
       .dogcard-wraps {
         width: 100%;
         max-width: 1920px;
-        height: clamp(350px, 53vh, 550px);
         background-color: #dbf0da;
         justify-content: center;
+        display: flex;
+        padding: 2rem 1rem;
+        box-sizing: border-box;
+        align-items: center;
+
+
       }
       .dogcard-list {
         margin: auto;
@@ -497,17 +520,34 @@
         display: flex;
         width: 100%;
         max-width: 1200px;
+        justify-content: space-around;
+          box-sizing: border-box;
       }
+@media screen and (max-width: 1024px) {
+  .dogcard {
+    flex: 1 1 45%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .dogcard {
+    flex: 1 1 90%;
+  }
+}
+   
       .photowall{
          display: flex;
          justify-content: flex-end;
          width: 100%;
          max-width: 1920px;
-         padding: 0 2rem; /* ä¾‹å¦‚å·¦å³å„æœ‰ 2rem ç©ºé–“ */
-         box-sizing: border-box; /* ç¢ºä¿ padding ä¸å½±éŸ¿å¯¦éš›å¯¬åº¦ */
+         padding: 0 2rem; 
+         box-sizing: border-box; 
    margin-top: 4vh;      }
 
       .spcolor{
 color: #8aba65 !important;
 }
-/* 物件下墜效果 */
+ .header{
+          font-family: Jua, Arial, "Kiwi Maru", "Noto Sans TC" in !important;
+
+ }

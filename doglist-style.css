@@ -1,7 +1,7 @@
 .drawingPaw2 {
     position: absolute;
     left: 0;
-    top: 215vh;
+    top: 200vh;
     z-index: -1;
 }
 
@@ -10,90 +10,100 @@
 position: absolute;
     right: 4vw;
     top: 62vh;
-    z-index: -1;
+    z-index: 0;
  }
- 
- .heroBanner {
-        margin-bottom: 9rem;
-        width: 100%;
-        position: relative;
-      }
-
-.banner-img {
-        position: relative;
-        display: flex;
-        align-content: space-between;
-        justify-content: space-around;
-        z-index: -5;    max-height: 600px;
-        overflow: hidden;
-          object-fit: cover;
-
-      }
-.banner-img video{
-    width: 100%;
-  height: 100%;
-  object-fit: cover;
-height: 600px; /* ✅ 加這行！ */
-z-index:-999
+ .bgcmod-03,.bgcmod-04{
+  display: none;
+}
+ .hero-banner {
+  width: 100%;
+  overflow: hidden;
 }
 
-.mask-img {
-        display: flex;
+.banner-media {
+  position: relative;
+  width: 100%;
+  height: clamp(300px, 63vh, 660px); /* 你控制影片/圖片區塊的高度 */
+  overflow: hidden;
+  line-height: 0;
+}
 
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        overflow-x: hidden;
-        z-index: -200;
-        pointer-events: none;
-      }
+.main-video,
+.mobile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
 
-.masked-image {
-        width: 100%;
-        height: auto;
-        max-width: 100%;
-        object-fit: cover;
-        display: block;
-        line-height: 0;
-      }
+/* 預設：桌機用影片 */
+.main-video {
+  display: block;
+}
+.mobile-image {
+  display: none;
+}
+
+
+
+/* 遮罩圖層固定貼底 */
+.mask-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  z-index: 1;
+  line-height: 0;
+}
+
+.mask-image img {
+  width: 100%;
+  height: auto;
+
+}
+
+.yellowmask {
+  display: block;
+}
+.whitemask {
+  display: none;
+}
+
 .dogcard-wraps {
         width: 100%;
         max-width: 1920px;
         justify-content: center;
       }
-.dogcard-list {
-        margin: 0vh auto;
-        flex-wrap: wrap;
-        display: flex;
-        width: 100%;
-        max-width: 1200px;
-      }
+
 .dogcard {
-        position: relative;
-        width: 90%;
-        max-width: 330px;
+          position: relative;
+        
         background-color: white;
         border-radius: 32px;
-
-
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-
         text-align: center;
         padding: 2rem 1.5rem 1.5rem;
         overflow: visible; /* 允許狗狗耳朵探出卡片 */
         margin-block: 5vh;
-        margin-inline:auto;
-
+        margin-inline: 1vh;
       }
 .dogcard:hover {
         transform: translateY(-5px);
-        border:2px solid #8ABA65;
+        /* border:2px solid #8ABA65; */
+        transition-delay: 0s;
+        transition: 0s;
+
+
+
 
       }
 
 
-      /* 把綠色圓形放在卡片內，並讓它靠近上方 */
 .circle-bg {
         position: relative; /* 改成相對定位 */
         width: 180px;
@@ -128,15 +138,15 @@ z-index:-999
 .gendere {
         width: 10px;
         height: auto;
-        align-items: center; /* 垂直置中（可選） */
+        align-items: center;
       }
       .gendere img {
         width: 100%;
-        align-items: center; /* 垂直置中（可選） */
+        align-items: center; 
       }
       .info {
         display: flex;
-        align-items: center; /* 垂直置中（可選） */
+        align-items: center; 
         margin: auto;
         
       }
@@ -144,8 +154,8 @@ z-index:-999
        padding-right: 1rem;
 
       }
-.info>h3{
-font-size: clamp(1rem, 1.11vw, 1.333rem);
+h3{
+font-size: 1.3rem;
 
       }
 .mainlist .title{
@@ -154,7 +164,7 @@ font-size: clamp(1rem, 1.11vw, 1.333rem);
         }
 
 h2 {
-        font-size: 2rem;
+font-size: 2rem;
         margin-bottom: 6rem;
       }
 .intro-txt .intro-img {
@@ -163,3 +173,68 @@ h2 {
       .mainlist {
   flex: 1; 
 }
+
+@media screen and (max-width: 768px) {
+  .main-video {
+    display: none;
+  }
+  .mobile-image {
+    display: block;
+  }
+  .yellowmask{
+    display: none;
+  }
+  .whitemask{
+    display: block;
+  }
+}
+ @media screen and (max-width: 768px) {
+ .dogcard-list {
+    gap: 5%;
+    padding-inline: 1rem;
+  }
+
+  .dogcard {
+    margin: 10vh auto;
+    max-width: 440px;
+    width: 100%;
+  }
+  .dogcard-image{
+     position: relative;
+       
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        z-index: 2;
+  }
+  .bgcmod-03,.bgcmod-04{
+  display:block;
+}
+.drawingPaw2,.drawingdog2{
+  display: none;
+}
+  
+} 
+
+/* 桌機以上維持原本的 Grid 或 Flex 排列 */
+@media screen and (min-width: 769px) {
+  .dogcard-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    padding: 2rem;
+    overflow: visible;
+ margin: 0vh auto;
+        flex-wrap: wrap;
+        width: 100%;
+    
+  }
+
+.dogcard{
+  flex: 1 1 300px;
+        width: 100%;
+        max-width: 330px;
+}
+}
+  

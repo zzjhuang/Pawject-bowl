@@ -8,9 +8,9 @@
 
     <link href="./reset.css" rel="stylesheet" />
     <link href="reveal.css" rel="stylesheet" />
-    <link href="bgmod.css" rel="stylesheet" />
+   
     <link href="order2style.css" rel="stylesheet" />
-
+ <link href="bgmod2.css" rel="stylesheet" />
     <style>
       * {
         margin: 0;
@@ -57,19 +57,19 @@
           <span class="icon"
             ><img src="asset/icon/icon-p.svg" alt="人數icon"
           /></span>
-          <span class="txt">2位大人1位兒童</span>
+          <span class="txt" id="peonum">2位大人1位兒童</span>
         </div>
         <div class="date">
           <span class="icon"
             ><img src="asset/icon/icon-date.svg" alt="日期icon"
           /></span>
-          <span class="txt">2025/06/04</span>
+          <span class="txt" id="date">2025/06/04</span>
         </div>
         <div class="time">
           <span class="icon"
             ><img src="asset/icon/icon-clock.svg" alt="時間icon"
           /></span>
-          <span class="txt">11:00</span>
+          <span class="txt" id = "time">11:00</span>
         </div>
       </div>
 
@@ -83,8 +83,9 @@
       <div class="title"><h2>確認訂位與填寫聯絡資訊</h2></div>
       <div class="name">
         
-          <p>訂位人姓名:</p>
-          <input type="text" class="name" />
+          <label>訂位人姓名:<span class="required" >*</span><span id="nameError" class="error-message ">請輸入姓名</span>
+</label><br>
+          <input type="text" class="name"placeholder="請輸入您的姓名" id="name" />
         
         <label> <input type="radio" name="gender" value="sir" />先生 </label>
         <label> <input type="radio" name="gender" value="madam" />女士 </label>
@@ -92,47 +93,57 @@
       </div>
       <div class="phonenum">
         <label>
-          <p>訂位人手機號碼:</p>
-          <input type="tel" name="phonenum" value="+886" />
+          <p>訂位人手機號碼:<span class="required">*</span><span id="phoneError" class="error-message ">請輸入手機號碼</span></p>
+          <input type="tel" name="phonenum"  placeholder="請輸入您的手機號碼" id="phonenum"/>        
+
         </label>
       </div>
       <div class="email">
         <label>
           <p>Email:</p>
-          <input type="text" name="mail" />
+          <input type="email" name="mail"placeholder="請輸入您的e-mail"  id="email"/>
         </label>
       </div>
       <div class="check">
         <label>
-          是否會帶毛小孩來用餐?
-          <input type="radio" name="cneck1" value="yes" />是
-          <input type="radio" name="cneck1" value="no" />否
+         是否會帶毛小孩來用餐?<span class="required">*</span>
+          <label><input type="radio" name="cneck1" value="yes" id="takedog" />是</label>
+          <label><input type="radio" name="cneck1" value="no" id="nonedog"/>否</label>
+          <span id="checkError" class="error-message ">請確認是否攜帶毛小孩</span>
         </label>
         
       </div>
-            <div class="check">
+            <div class="check" id="dogchecklist">
 
         <label>
-          為保護店內與其他顧客的毛小孩安全，本店目前不接待特定攻擊性較高的犬種，請確認您的毛孩有無符合規範?
-          <br />
-          <span class="graytxt"
-            >我不確定是否屬於特殊犬種？<a href="#">【點我看圖例】」</a></span
-          >          <br />
+          為保護店內與其他顧客的毛小孩安全，本店目前不接待特定攻擊性較高的犬種，請確認您的毛孩有無符合規範?<span class="required">*</span>
+             <span class="graytxt"
+            >我不確定是否屬於特殊犬種？<a href="#"  id="showModal">【點我看圖例】」</a></span
+          > 
 
-          <input type="radio" name="cneck2" value="yes" />是
-          <input type="radio" name="cneck2" value="no" />否
+          <label><input type="radio" name="cneck2" value="yes"/>是</label>
+          <label><input type="radio" name="cneck2" value="no"/>否</label>
+<span id="dogTypeError" class="error-message ">請確認</span>
+
         </label>
+        <!-- Modal 彈出卡片 -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" id="closeModal">&times;</span>
+    <img src="asset/indexpic/dogtype.jpg" alt="犬種圖例" style="width: 100%;" />
+    <p>請確認您的毛孩是否屬於圖中所列犬種。</p>
+  </div>
+</div>
      </div>
              <div class="check">
 
         <label>
-          請問您的毛孩是否已定期施打心絲蟲藥? <br />
-          <span class="graytxt"
-            >「什麼是心絲蟲藥？）<a href="#">【常見問題】</a></span
-          >
-          <br />
+          請問您的毛孩是否已定期施打心絲蟲藥?<span class="required">*</span> <br />
+          
           <input type="radio" name="cneck3" value="yes" />是
           <input type="radio" name="cneck3" value="no" />否
+          <span id="heartwormError" class="error-message ">請確認</span>
+
         </label>
              </div>
       </div>
@@ -142,22 +153,15 @@
           <input
             type="checkbox"
             name="agree"
-          />按下確認訂位代表我已閱讀並同意訂位須知</label
+          />我已閱讀並同意訂位須知</label
         > </div>
-        <input type="submit" value="確認定位" />
-        <input type="button" value="返回上一頁" />
+        <input type="submit" value="確認訂位" />
+        <input type="button" value="返回上一頁"  id="goBackBtn" />
      </div>
     </form>
     <div id="footer-container"></div>
     <script src="load-components.js"></script>
     <script src="revealElements.js"></script>
-    <script >
-
-       document.getElementById("reservationForm").addEventListener("submit", function (e) {
-    e.preventDefault();
-    window.location.href = "thank.html"
-    
-  });
-    </script>
+    <script src="form2.js"></script>
   </body>
 </html>

@@ -9,3 +9,21 @@ transition-delay: 0.3s;
   opacity: 1;
   transform: translateY(0);
 }
+
+.ansreveal {
+  opacity: 0;
+  transform: translateY(-3vh);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.ansreveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media screen and (max-width: 768px) {
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

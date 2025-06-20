@@ -19,7 +19,9 @@
     height: auto;
 }
 
-
+.bgcmod-03,.bgcmod-04{
+  display: none;
+}
 section.heroBanner {
   display: flex;
   flex-direction: column;
@@ -59,7 +61,7 @@ section.heroBanner {
 
 /* hover 時展開整個 bannertxt 區域 */
 .banner:hover .bannertxt {
-  height: 5.5em; /* 展開的高度視情況調整 */
+  height: 6.5em; /* 展開的高度視情況調整 */
 }
 
 /* hover 時文字滑上來 */
@@ -76,8 +78,11 @@ section.heroBanner {
 }
 
 .title h2 {
-  font-size: clamp(1.5rem, 2vw + 1rem, 3.5rem);
-  margin: 3.5vh auto;}
+  margin: 3.5vh auto;
+font-size: 2rem;
+
+}
+  
 
 .m-list{
     width: 100%;
@@ -87,34 +92,45 @@ section.heroBanner {
     justify-content:space-around ;
 }
 .m-list ul {
-  display: flex;              /* 橫向排列 */
-  gap: 16px;                  /* 每個項目間距 */
-  list-style: none;           /* 移除預設圓點 */
+
+  display: flex;          
+  gap: 16px;                 
+  list-style: none;          
   padding: 0;
   margin-top: 16px;
-  justify-content: center;    /* 置中排列 */
-  flex-wrap: wrap;            /* 若太長允許自動換行 */
+  justify-content: center;    
+  flex-wrap: wrap;           
 }
 
 .m-list li {
+   border: 1px solid #7A6F46;
+  display: flex;
+font-size:24px;
+  color: #7A6F46;
+  border-radius: 32px;
+  padding: 10px 15px 10px 15px;
   display: flex;
   align-items: center;
-  font-size: 1rem;
-  background-color: #fcfcc7;
-  padding: 8px 12px;
-  margin-inline: 0.3vw;
-  border-radius: 20px;
-  color: #7A6F46;
+  cursor: pointer;
+  width: max-content;
+  margin-top: 5%;
+  justify-content: flex-end;
+  transition: transform 0.2s ease;
+
 }
 
 .m-list li:hover{
-      background-color: #dbf0da;
-    
+       border: 1px solid #7A6F46;
+   transform: translateY(-5px);
+
+
 
 }
 .icon {
+  display: flex;
   margin-right: 8px;
   font-size: 1.2rem;
+  align-items: center;
 }
 
 
@@ -160,13 +176,15 @@ section.heroBanner {
 }
 
 .card-content {
-  padding: 16px;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
+    padding: 16px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vh;
+    justify-content: flex-start;
 }
+
 .card-title {
   font-size: 1.6rem;
   margin: 0 0 8px;
@@ -174,13 +192,81 @@ section.heroBanner {
 }
 
 .card-desc {
-  font-size: 14px;
   color: #333;
   margin: 0;
   line-height: 1.4;
 }
 
 .card:hover{
-            transform: translateY(-5px);
+  transform: translateY(-5px);
 
 }
+
+
+   @media (max-width: 1024px) {
+
+
+
+ .bgfoodleft,.bgfoodright{
+  opacity: 0.3 !important;
+ }
+
+      }
+
+
+ /* RWD 手機版調整 */
+      @media (max-width: 768px) {
+        section{
+          margin-inline: 10px;
+        }
+        .main {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .drawingLeaf,
+        .drawingPaw2,
+        .bgfoodleft,
+        .bgfoodright {
+          display: none;
+        }
+
+.bannertxt{
+  display: none;
+}
+
+.bgcmod-03,.bgcmod-04{
+  display:block;
+}
+
+.card {
+    display: flex;
+    aspect-ratio: 7 / 5.5;
+    background-color: #707070;
+  }
+.card-title{
+  color: white;
+}
+  .card-content {
+    display: flex;
+    padding: 1vh;
+  }
+
+  .card-desc {
+    display: none; /* ✅ 隱藏描述段落 */
+  }
+  ul{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap:3px;
+
+  }
+.m-list li {
+
+font-size:1.5rem;
+}
+}
+
+     

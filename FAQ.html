@@ -8,173 +8,8 @@
     <link href="./reset.css" rel="stylesheet" />
     <link href="reveal.css" rel="stylesheet" />
     <link href="bgmod.css" rel="stylesheet" />
-
+<link href="FAQstyle.css" rel="stylesheet"/>
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        margin: 0;
-        background-color: #ffffe7;
-        font-family: Jua, Arial, "Kiwi Maru", "Noto Sans TC";
-        overflow-x: hidden;
-      }
-      p {
-        margin-bottom: 2px !important;
-        letter-spacing: 1px !important;
-        line-height: clamp(1.3rem, 6vw, 2.3rem) !important;
-      }
- .top {
-        display: flex;
-        max-width: 1200px;
-        width: 100%;
-        margin: 12vh auto 3vh;
-      }
-      .btn-item {
-        padding-inline: 20vh;
-        display: flex;
-        width: 100%;
-        max-width: 1200px;
-        margin: 2vh auto;
-        flex-direction: row;
-      }
-      .Btn {
-        margin: auto;
-        background-color: #8aba65;
-        border-radius: 32px;
-        margin: auto;
-        background-color: #8aba65;
-        border-radius: 32px;
-        padding: 10px 10px 10px 15px;
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-        margin-top: 5%;
-        justify-content: flex-end;
-        z-index: 3;
-        position: relative;
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-        margin-top: 5%;
-        justify-content: flex-end;
-        z-index: 3;
-        position: relative;
-      }
-      .Btn span {
-        padding: 10px 10px 10px 30px;
-        color: #fff;
-      }
-
-      .iconOrder,
-      .iconOrderHover {
-        position: absolute;
-        margin-left: 1.3vh;
-        left: 0;
-        width: 24px;
-        height: 24px;
-        transition: opacity 0.5s ease;
-        user-select: none;
-        pointer-events: none;
-      }
-
-      .iconOrderHover {
-        opacity: 0;
-      }
-
-      .Btn:hover {
-        background-color: #fcfcc7;
-      }
-
-      .Btn:hover span {
-        color: #7a6f46;
-      }
-
-      .Btn:hover .iconOrder {
-        opacity: 0;
-      }
-
-      .Btn:hover .iconOrderHover {
-        opacity: 1;
-      }
-      .Q {
-        position: absolute;
-        left: 0;
-        bottom: 19vh;
-      }
-.information .divider {
-  text-align: center;
-}
-
-.information .divider hr{
-  width: 100%;
-}
-.dogicon {
-
-position: absolute;
-margin-top: 0.5rem;
-height: auto;
-right: 0;
-bottom: 0vh
-}
-.divider {
-    position: relative;
-}
-
-section.quelist {
-    width: 100%;
-    margin: 5vh auto;
-    max-width: 1200px;
-    display: flex;
-    flex-direction: column;
-}
-h2{
-font-size: clamp(1.5rem, 2vw + 1rem, 3.5rem);
-    margin-top: 3.5vh;
-    margin-bottom:5vh;
-    text-align: center;
-}
-.que {
-    display: flex;
-    justify-content: flex-start;
-    margin: 1vh auto;
-    align-items: center;
-    max-width: 1200px;
-    width: 100%;
-    position: relative;
-    
-}
-.plusicon{
-  position: absolute;
-  right:0
-
-}
-.q {
-    margin: 1vh;
-}
-h3{
-  font-size: 1.5rem;
-  margin-bottom: 2px !important;
-        letter-spacing: 1px !important;
-        line-height: clamp(1.3rem, 6vw, 2.3rem) !important;
-}
-.Qicon img{
-  width: 30vh;
-  position: absolute;
-  left: 10vh;
-  top: 17vh;
-}
-.drawingLeaf{
- position: absolute;
- top: 25vh;
- right: 9vh;
- width: 200px;
- height: auto;
- z-index: 0;
- }
 
     </style>
   </head>
@@ -197,79 +32,336 @@ h3{
 
     <div class="top">
       <div class="btn-item">
-        <div class="Btn">
+        <div class="Btn" id="faqbtn">
           <img src="asset/icon/btn-dog-icon.svg" class="iconOrder" />
           <img src="asset/icon/btn-dog-icon-hover.svg" class="iconOrderHover" />
           <span>常見問題</span>
         </div>
 
-        <div class="Btn">
+        <div class="Btn" id="Adoptbtn">
           <img src="asset/icon/btn-dog-icon.svg" class="iconOrder" />
           <img src="asset/icon/btn-dog-icon-hover.svg" class="iconOrderHover" />
           <span>領養須知</span>
         </div>
 
-        <div class="Btn">
+  <div class="Btn" id="qualbtn">
+          <img src="asset/icon/btn-dog-icon.svg"class="iconOrder" />
+          <img src="asset/icon/btn-dog-icon-hover.svg" class="iconOrderHover" />
+          <span>領養資格</span>
+        </div>
+
+
+        <div class="Btn" id="processbtn">
           <img src="asset/icon/btn-dog-icon.svg"class="iconOrder" />
           <img src="asset/icon/btn-dog-icon-hover.svg" class="iconOrderHover" />
           <span>領養流程</span>
         </div>
+
+
+
+
       </div>
     </div>
 
 
-    <section class="quelist">
+    <section class="quelist" id="faq">
     <div class="title"><h2>常見問題</h2></div>
      <div class="divider">
         <hr/>
         <img class="dogicon" src="asset/icon/3dogicon.svg" />
       </div>
+
+    <div class="queitem">
+      <div class="que">
+          <div class="q" ><img src="asset/icon/Qicon.svg" alt=""  />
+            <h3>你們的狗狗可以被認養嗎？要怎麼認養呢？</h3>   
+            <div class="plusicon" ><img src="asset/icon/plusicon.svg" alt="" /></div> 
+          </div>
+          <div class="a hidden ansreveal" id="a1"><img src="asset/icon/aicon.svg" alt="" />
+          <p>可以唷！我們店裡的狗狗們都是等待家的中途寶貝。如果您有意願給牠們一個永遠的家，可以向我們的工作人員洽詢，我們會安排基本的認養流程與評估，確保毛孩能找到合適的家庭。</p>   
+        </div>
+        <hr>
+      </div>
+      <div class="que">
+          <div class="q" ><img src="asset/icon/Qicon.svg" alt="" />
+            <h3> 來店消費會強迫認養或捐款嗎？</h3>   
+            <div class="plusicon"  ><img src="asset/icon/plusicon.svg" alt="" /></div> 
+          </div>
+          <div class="a hidden ansreveal" id="a1"><img src="asset/icon/aicon.svg" alt="" />
+          <p>絕對不會！
+來我們這裡用餐就是單純享受健康料理與狗狗的陪伴，不會強迫任何形式的認養或捐款。我們希望每一份幫助都是出自自願與真心 </p>   
+        </div>
+        <hr>
+      </div>
+
+            <div class="que">
+          <div class="q" ><img src="asset/icon/Qicon.svg" alt="" />
+            <h3>可以帶自己的狗來用餐嗎？</h3>   
+            <div class="plusicon"  ><img src="asset/icon/plusicon.svg" alt="" /></div> 
+          </div>
+          <div class="a hidden ansreveal" id="a1"><img src="asset/icon/aicon.svg" alt="" />
+            <div class="">
+          <p>歡迎帶狗狗一起來用餐，但為了維護所有毛孩與客人的安全與舒適，請留意以下幾點：</p>
+            <ul> 
+              <li>限體型中小型、個性溫和、無攻擊行為 的狗狗</li>
+              <li>已施打基本疫苗，有定期預防心絲蟲</li>
+              <li>記得攜帶便袋與清潔用品，維護公共衛生</li>
+              <li>大型犬或攻擊性犬種、未打心絲蟲預防藥的狗狗恕不接待</li>
+            </ul>
+<p>我們希望創造一個人狗都能安心享受的空間，謝謝理解與配合！</p>  </div> 
+        </div>
+        <hr>
+      </div>
+
+      <div class="que">
+          <div class="q" ><img src="asset/icon/Qicon.svg" alt="" />
+            <h3>什麼是心絲蟲藥？</h3>   
+            <div class="plusicon"  ><img src="asset/icon/plusicon.svg" alt="" /></div> 
+          </div>
+          <div class="a hidden ansreveal" id="a1"><img src="asset/icon/aicon.svg" alt="" />
+          <p>心絲蟲藥是用來預防心絲蟲病的藥物，通常為每月服用一次的口服藥或外用滴劑。
+心絲蟲是透過蚊子叮咬傳染給狗狗的寄生蟲，會寄生在心臟與肺部，嚴重時可能導致死亡。</p>   
+        </div>
+        <hr>
+      </div>
+
+      <div class="que">
+          <div class="q" ><img src="asset/icon/Qicon.svg" alt="" />
+            <h3>為什麼狗狗一定要打心絲蟲藥？</h3>   
+            <div class="plusicon"  ><img src="asset/icon/plusicon.svg" alt="" /></div> 
+          </div>
+          <div class="a hidden ansreveal" id="a1"><img src="asset/icon/aicon.svg" alt="" />
+          <p>因為心絲蟲病一旦感染，治療費用高、過程辛苦、風險大，預防比治療簡單很多！
+台灣屬於高蚊蟲環境，狗狗沒有打心絲蟲預防藥會面臨很高風險，因此我們僅接待有定期預防的狗狗入店，是對所有狗狗的保護唷</p>   
+        </div>
+        <hr>
+      </div>
+
+      <div class="que">
+          <div class="q" ><img src="asset/icon/Qicon.svg" alt="" />
+            <h3> 你們的食物可以給狗狗吃嗎？</h3>   
+            <div class="plusicon"  ><img src="asset/icon/plusicon.svg" alt="" /></div> 
+          </div>
+          <div class="a hidden ansreveal" id="a1"><img src="asset/icon/aicon.svg" alt="" />
+          <p>我們的餐點是為人設計的「低油低鹽健康蔬食」，部分食材對狗狗是安全的，但畢竟調味不同，不建議直接分食。
+若您希望狗狗也能吃得健康，我們有推出「狗狗專屬便當」，可以安心享用！</p>   
+        </div>
+        <hr>
+      </div>
+
+      <div class="que">
+          <div class="q" ><img src="asset/icon/Qicon.svg" alt="" />
+            <h3>如果我想幫自己的狗狗找認養人，你們有提供送養協助嗎？</h3>   
+            <div class="plusicon"  ><img src="asset/icon/plusicon.svg" alt="" /></div> 
+          </div>
+          <div class="a hidden ansreveal" id="a1"><img src="asset/icon/aicon.svg" alt="" />
+          <p>有的，我們願意提供送養曝光協助！
+只要毛孩健康、已施打疫苗，並經過基本評估，我們可以幫忙拍照、上架介紹，協助您幫牠找家，但仍需配合我們的送養審核機制。</p>   
+        </div>
+        <hr>
+      </div>
+
+    </div>
+  </section>
+
+
+
+<section class="AdoptionGuidelines" id="adopt">
+  <div class="title"><h2>領養須知</h2>
+      <P>領養前你需要知道的3件事    </P>  
+    </div>
+<div class="slider-container">
+  <button class="prev-btn"><img src="asset/icon/Paw.png"></button>
+  <div class="card-wrapper">
+
+    <div class="card">
+    <div class="card-txt">
+      <h2>生活條件準備</h2>
+      <ul>
+        <li>時間</li>
+        <li>空間</li>
+        <li>經濟能力</li>
+      </ul>
+      <p>   
+        領養前先確認自己是否具備穩定的生活基礎。<br>
+        ✔ 每天能抽空陪伴狗狗 <br>
+        ✔ 居住空間安全舒適 <br>
+        ✔ 能負擔飼料、醫療、美容等日常支出 <br>
+        若有家人同住，請先取得共識；租屋者也需與房東確認是否可養寵物。
+      </p>
+    </div>
+    <div class="card-pic">
+      <img src="asset/indexpic/prepare-pic.jpg" alt="">
+    </div>
     </div>
 
-    <div class="que">
-      <div class="q"><img src="asset/icon/Qicon.svg" alt="" /></div>
-      <h3>你們的狗狗可以被認養嗎？要怎麼認養呢？</h3>    
-      <div class="plusicon"><img src="asset/icon/plusicon.svg" alt="" /></div>
-     
-    </div> <hr/>
-    <div class="que">
-      <div class="q"><img src="asset/icon/Qicon.svg" alt="" /></div>
-      <h3>來店消費是否會強迫認養或捐款？</h3>
-      <div class="plusicon"><img src="asset/icon/plusicon.svg" alt="" /></div>
-          
+    <div class="card">
+    <div class="card-txt">
+      <h2>心理準備</h2> 
+      <ul> 
+        <li>長期承諾</li>
+        <li>包容心</li>
+        <li>耐心學習</li> 
+      </ul>
+      <p>
+        狗狗是家庭成員，不是一時的衝動選擇。<br>
+        ✔ 領養後需陪伴牠度過10年以上的生命旅程 <br>
+        ✔ 願意包容狗狗可能出現的行為問題，如亂咬、吠叫 <br>
+        ✔ 願意學習正確飼養方式，並持續調整與牠的相處模式 <br>
+        切勿因一時困擾就棄養，牠們的生命只有你。
+      </p>
     </div>
-    <hr/>
-    <div class="que">
-      <div  class="q"><img src="asset/icon/Qicon.svg" alt="" /></div>
-      <h3>可以帶自己的狗來用餐嗎？</h3>
-      <div class="plusicon"><img src="asset/icon/plusicon.svg" alt="" /></div>
+    <div class="card-pic">
+      <img src="asset/indexpic/prepare-pic2.jpg" alt="">
     </div>
-    <hr/>
-    <div class="que">
-      <div  class="q"><img src=asset/icon/Qicon.svg alt="" /></div>
-      <h3>你們的食物可以提供給狗狗吃嗎</h3>
-      <div class="plusicon"><img src="asset/icon/plusicon.svg" alt="" /></div>
+    </div>
+
+    <div class="card">
+    <div class="card-txt">
+      <h2>照護資源準備</h2>
+      <ul>
+        <li>動物醫院</li>
+        <li>緊急聯絡</li>
+        <li>狗狗用品</li>
+      </ul>
+      <p>
+        領養前先規劃好狗狗的生活與醫療資源。<br>
+        ✔ 找好可信賴的獸醫院，定期施打疫苗與健檢<br>
+        ✔ 確保有人能在你不在時代為照顧<br>
+        ✔ 預先準備牽繩、食盆、床墊、清潔用品等必要物資<br>
+        有備無患，才能真正讓牠安心融入新家。
+      </p>
+    </div>
+    <div class="card-pic">
+      <img src="asset/indexpic/prepare-pic3.jpg" alt="">
+    </div>
+    </div>
+  </div>
+  <button class="next-btn"><img src="asset/icon/Paw.png"></button>
+
+</div>
+</section>
+<section class="qual" id="qual">
+<div class="title"><h2>領養資格</h2>
+<div class="qualifications">
+
+<div class="qualifications-pic">
+  <img src="asset/indexpic/dogpw09.jpg" alt="狗狗露出期待眼神的照片">
+</div>
+<div class="qualifications-txt">
+  <h3>認養人資格</h3>
+<ul>
+  
+
+  <li>年滿 18 歲，須出示有效身分證明文件</li>
+  <li>無違反《動物保護法》紀錄者</li>
+  <li>認同領養代替購買，願意承諾終生照顧</li>
+</ul>
+<h3>認養相關費用</h3>
+<P>我們致力於讓每隻毛孩都能順利找到愛的歸屬，因此不會向認養人收取高額費用。但為確保動物基本健康與合法登記，仍需辦理部分必要手續：
+認養包含：基本健康檢查、狂犬疫苗一劑、晶片植入與寵物登記
+若有額外醫療需求或補辦手續，可協助聯繫合作獸醫院
+詳細費用項目與安排，將由現場志工協助說明，如需進一步了解相關流程或預約訪談，歡迎直接與我們聯繫！</P>
+
+</div>
+</section>
+ <section class="process" id="process" >
+  <div class="title"><h2>領養流程</h2>
+    </div>
+<div class="slider-container">
+  <button class="prev-btn"><img src="asset/icon/Paw.png"></button>
+  <div class="card-wrapper">
+
+    <div class="card">
+    <div class="card-txt">
+      <h2>步驟1:填寫申請表：讓我們了解你</h2>
       
-    </div>  
-      <hr/>
-    <div class="que">
-      <div class="q"><img src=asset/icon/Qicon.svg alt="" /></div>
-      <h3>如果我想幫自己的狗狗找認養人，你們有提供送養協助嗎？</h3>
-      <div class="plusicon"><img src="asset/icon/plusicon.svg" alt="" /></div>
-         
-    </div> 
-    <hr/>
-    <div class="que">
-      <div class="q"><img src=asset/icon/Qicon.svg alt="" /></div>
-      <h3>餐點都是低熱量嗎？吃得飽嗎？</h3>
-      <div class="plusicon"><img src="asset/icon/plusicon.svg" alt="" /></div>
-        
-    </div>  
-    <hr/>
-  </section>
+      <p>   
+     請留下聯絡方式、居住環境、過往飼養經驗與你的生活作息，這是了解你與毛孩是否適合的重要第一步。我們重視每一份申請，會在 3～5 個工作天內與你聯繫。
+      </p>
+    </div>
+    <div class="card-pic">
+      <img src="asset/indexpic/Processpic1.png" alt="">
+    </div>
+    </div>
+ <div class="card">
+    <div class="card-txt">
+      <h2>步驟2:約見毛孩：感受眼神中的連結
+</h2>
+      
+      <p>   
+     我們會安排一對一的見面互動，觀察毛孩的個性與你的相處狀況。有些毛孩內向、有些活潑，需要耐心與理解，這一步是建立彼此信任的開始。
+      </p>
+    </div>
+    <div class="card-pic">
+      <img src="asset/indexpic/Processpic2.png" alt="">
+    </div>
+    </div>
+   
+<div class="card">
+    <div class="card-txt">
+      <h2>步驟3:評估與溝通：確認你準備好了</h2>
+      
+      <p>   
+    我們可能會依個案安排線上或實體家訪，或是提供飼養前的準備清單與問答。這也是你問問題的機會，有任何疑慮或需求，我們會一起討論，幫你準備好迎接新家庭成員。
+      </p>
+    </div>
+    <div class="card-pic">
+      <img src="asset/indexpic/Processpic3..png" alt="">
+    </div>
+    </div>
+
+
+
+    <div class="card">
+    <div class="card-txt">
+      <h2>步驟4:簽約領養：牽起一輩子的承諾</h2>
+      
+      <p>   
+    當雙方都準備好後，我們會簽署正式領養協議，並說明後續回訪與責任事項。完成手續後，毛孩就能開心回家，成為你生命中的重要夥伴。
+      </p>
+    </div>
+    <div class="card-pic">
+      <img src="asset/indexpic/Processpic4..png" alt="">
+    </div>
+    </div>
+
+
+
+  </div>
+  <button class="next-btn"><img src="asset/icon/Paw.png"></button>
+
+</div>
+</section>  
+
     <div id="footer-container"></div>
 
     <script src="load-components.js"></script>
     <script src="revealElements.js"></script>
+    <script src="slideshow.js"></script>
+    <script src="faq-btn-list.js"></script>
+    <script >
+document.querySelectorAll('.q').forEach(icon => {
+  icon.addEventListener('click', () => {
+    const answer = icon.closest('.que').querySelector('.a');
+const img = icon.querySelector('.plusicon img');
+
+    // 切換顯示/隱藏
+    const isHidden = answer.classList.contains('hidden');
+    answer.classList.toggle('hidden');
+
+    if (isHidden) {
+      // 如果剛剛是隱藏 → 現在顯示，要重新播放動畫
+      answer.classList.remove('active');
+      void answer.offsetWidth; // 強制 reflow
+      answer.classList.add('active');
+    }
+
+    // 圖示轉圈動畫
+    img.classList.add('clicked');
+    setTimeout(() => img.classList.remove('clicked'), 600);
+  });
+});
+    </script>
   </body>
 </html>

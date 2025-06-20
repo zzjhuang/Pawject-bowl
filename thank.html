@@ -7,10 +7,11 @@
 
     <link href="./reset.css" rel="stylesheet" />
     <link href="reveal.css" rel="stylesheet" />
-    <link href="bgmod.css" rel="stylesheet" />
+    <link href="bgmod2.css" rel="stylesheet" />
 
-    <style>
-      * {
+    
+     <style>
+  * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
@@ -23,14 +24,15 @@
         overflow-x: hidden;
       }
       p {
+        font-size: 1.3rem;
         margin-bottom: 2px !important;
         letter-spacing: 1px !important;
         line-height: clamp(1.3rem, 6vw, 2.3rem) !important;
       }
       .thank {
         width: 100%;
-        margin: 14vh auto 4vh;
-
+        margin: 14vh auto 0vh;
+        flex:1;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -38,7 +40,7 @@
       }
 
       h3 {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
         margin-bottom: 2px !important;
         letter-spacing: 1px !important;
         line-height: clamp(1.3rem, 6vw, 2.3rem) !important;
@@ -55,17 +57,20 @@
       }
 
       h2 {
-        font-size: clamp(1.5rem, 2vw + 1rem, 3.5rem);
-        margin-top: 3.5vh;
+font-size: 2rem;
+        margin-top: 2vh;
         margin-bottom: 1vh;
         text-align: center;
         color: #7a6f46;
+      }
+      h4{
+        font-size: 1.3rem;
       }
       .hint {
         display: flex;
         width: 100%;
         max-width: 1200px;
-        margin: 2vh auto;
+        margin: 5vh auto 0vh;
         flex-direction: column;
         align-content: center;
         align-items: center;
@@ -74,35 +79,44 @@
         text-align: center;
       }
       .info-item {
-        background-color: #ffffe7;
-        border-radius: 32px;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        display: flex;
-        width: 100%;
-        max-width: 1200px;
-        margin: 2vh auto;
-        flex-direction: column;
-        align-content: center;
-        align-items: center;
-        padding: 5vh;
-        padding-block: 10vh;
-      }
+    background-color: #ffffe7;
+    border-radius: 32px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    width: 90%;
+    margin-top: 3vh;
+    margin: 2vh auto 0vh;
+    align-content: center;
+    align-items: center;
+    padding: 5vh;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    }
       .btn-item {
-        display: flex;
-        width: 100%;
-        max-width: 1200px;
-        margin: 2vh auto;
-        flex-direction: row;
-        align-content: center;
-        align-items: center;
-        justify-content: space-around;
-      }
+    display: flex;
+    width: 90%;
+    margin: 2vh auto;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+    }
       input[type="button"] {
-        margin-block: 1vh;
-        background-color: #fcfcc7;
-        width: 300px;
+        width: 280px;
+        margin-inlie: 0vh;
+        /* gap: 2vh; */
         padding-block: 2vh;
-        padding-inline: 4vh;
+        margin-block: 3vh;
+        font-size: 1.3rem;
+        background-color: #fcfcc7;
+        padding: 1vh;
+        padding-inline: 3vh;
+        border-radius:32px;
+        border: none;
+      }
+       input[type="button"]:hover,input[type="submit"]:hover{
+        background-color: #dbf0da;
+        transform: translateY(-5px);
       }
       input[type="button"]:first-child {
         background-color: rgb(231, 231, 231);
@@ -134,9 +148,12 @@
       }
 
       .map {
-        padding: 1vh;
         border-radius: 32px;
         overflow: hidden;
+        margin-block: 3vh;
+      }
+      iframe{
+        width: 100%;
       }
       .mapbox {
         align-items: center;
@@ -153,11 +170,16 @@ position: absolute;
     top: 62vh;
     z-index: -1;
  }
- .bgfoodleft{
-    position: absolute;
-    left: -23px;
-    top: 106vh;
-    width: 100px;
+
+main{
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: stretch;
+}
+.information{
+  flex: 2;
 }
     </style>
   </head>
@@ -178,7 +200,7 @@ position: absolute;
       </div>
 </div> 
     </div>
-
+<main>
     <div class="thank reveal">
       <div class="circle">
         <img src="asset/icon/thankdog.png" alt="" />
@@ -186,21 +208,21 @@ position: absolute;
           <h3>訂位成功!</h3>
         </div>
       </div>
-    </div>
 
+</div>
     <section class="information">
-      <div class="hint">
-        <p>
+      
+      <div class="info-warp">
+            <div class="hint">
+        <p id="greetingText">
           OO先生您好<br />
-          您已完成訂位<br />
-          訂位資訊:<br />
+          您已完成訂位，訂位資訊:<br />
         </p>
       </div>
-      <div class="info-warp">
         <div class="info-item">
-          <div class="date"><h2>2025年5月15日 星期五</h2></div>
-          <div class="time"><h2>20:00</h2></div>
-          <div class="peonum"><h4>2位大人1位兒童</h4></div>
+          <div class="date"><h2 id="finalDate"></h2></div>
+    <div class="time"><h2 id="finalTime"></h2></div>
+    <div class="peonum"><h4 id="finalPeople"></h4></div>
         </div>
         <div class="btn-item">
           <input type="button" value="取消訂位" />
@@ -208,18 +230,18 @@ position: absolute;
 
           <input type="button" value="編輯訂位" />
         </div>
-        <div class="remind">
-          <p>
-            如需更改訂位，請於用餐前一日在線上進行更改。<br />
-            如有其他訂位問題，請直接聯繫我們 02-1234-5678
-          </p>
-        </div>
+        
       </div>
+
     </section>
+    
+  </main>
     <section class="container">
       <div class="mapbox">
+   
         <div class="txt">
-          <p>
+          <p>  如需更改訂位，請於用餐前一日在線上進行更改。<br />
+            如有其他訂位問題，請直接聯繫我們 
             聯絡資訊 地址：台北市××區××路×號<br />
             電話：02-1234-5678<br />
             Email：hello@pawjectbowl.com<br />
@@ -244,5 +266,6 @@ position: absolute;
 
     <script src="load-components.js"></script>
     <script src="revealElements.js"></script>
+    <script src="thank.js"></script>
   </body>
 </html>
