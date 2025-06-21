@@ -142,23 +142,31 @@
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 <script src="form.js"></script>
 <script>
-  const input = document.getElementById("datePicker");
-  const calendarContainer = document.getElementById("calendarContainer");
+let calendarInstance;
 
-  let calendarInstance;
+function initCalendar(showMonthsCount) {
+  if (calendarInstance) calendarInstance.destroy();
 
-  document.addEventListener('DOMContentLoaded', () => {
+  calendarInstance = flatpickr("#calendarContainer", {
+    inline: true,
+    minDate: "today",
+    maxDate: new Date().fp_incr(60),
+    showMonths: showMonthsCount,
+    onChange: function (selectedDates, dateStr) {
+      document.getElementById("datePicker").value = dateStr;
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('calendarContainer').style.display = 'block';
+  initCalendar(window.innerWidth < 768 ? 1 : 2);
 });
 
-flatpickr("#calendarContainer", {
-  inline: true,               
-  minDate: "today",           
-  maxDate:new Date().fp_incr(60),
-    showMonths: 2,            
-
-  onChange: function (selectedDates, dateStr) {
-    document.getElementById("datePicker").value = dateStr;
+window.addEventListener('resize', () => {
+  const newMonths = window.innerWidth < 768 ? 1 : 2;
+  if ((calendarInstance.config.showMonths || 1) !== newMonths) {
+    initCalendar(newMonths);
   }
 });
 

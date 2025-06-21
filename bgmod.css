@@ -45,6 +45,7 @@
 .bgcmod-05,
 .bgcmod-06{
   position: absolute;
+  overflow: hidden;
 }
 
 .bgcmod-01 {
@@ -78,8 +79,8 @@
   top: 0;
 }
 .bgcmod-06{
-  right: 0vh;
-  top: 40vh;
+  right: -5%;
+  bottom: -40%;
   }
 @media (max-width: 1024px) {
 
@@ -140,4 +141,10 @@ opacity: 0.6;
 
 
 
+}
+@media screen and (max-width: 430px) {
+      .bgcmod-04 {
+      display: none;
+      }
+  
 }

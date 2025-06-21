@@ -15,11 +15,10 @@
    margin-top: 7vh;
    margin-bottom: 7vh;
    margin-inline: auto;
-     position: relative;
-  z-index: 1;
-      max-width: 1200px;
-       width: 100%; 
-
+   /* position: relative; */
+   z-index: 1;
+   max-width: 1200px;
+   /* width: 100%; */
 }
 
 .txt>p{
@@ -44,7 +43,7 @@
    margin-inline: auto;
 }
 .mainbox{
-    padding: 1.5vw;
+    padding: 2.5vw;
     margin: auto;
     background-color: #fff;
     border-radius: 32pt;
@@ -63,6 +62,16 @@
     flex-direction: row;
     align-items: center;
     text-align: start;
+
+}
+
+
+
+.map iframe {
+  max-width: 100%;
+  height:450px;
+  display: block;
+
 }
 
 .socialmedia{
@@ -122,12 +131,18 @@
 }
 
 .qrcode {
-   position: absolute;
-   top: 50%;
-   left: 40%;
-   transform: translate(-50%, -50%);
-   width: 80px; /* 放大 QR code */
-   max-width: 100px;
+      position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 150px;
+}
+.qrcode img {
+    width: 100%;
+}
+#fb,#ig{
+  display: none;
 }
 .link{
     margin-block: 5vh;
@@ -145,9 +160,13 @@
     flex-direction: column-reverse;
     align-items: center;
 }
+.line img:hover,.ig img:hover,.fb img:hover{
+    transform: translateY(-5px);
+
+}
 
 
-@keyframes slideInFromLeft {
+/* @keyframes slideInFromLeft {
   0% {
     opacity: 0;
     transform: translateX(-100%);
@@ -182,11 +201,81 @@
 
 .reveal-on-scroll {
   opacity: 0;
-  transform: translateX(0); /* 可以視需要設定一個預設值避免動畫跳動 */
+  transform: translateX(0); /* 可以視需要設定一個預設值避免動畫跳動 
   transition: opacity 0.3s ease-out, transform 0.3s ease-out;
 
-}
+} */
 iframe {
     border-radius: 32px;
     position: relative;
+}
+
+@media (min-width: 1200px) {
+  .responsive-link {
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+  }
+}
+
+
+@media screen and (max-width: 1200px) {
+
+  .socialmedia-card{
+    /* margin-inline: 2%; */
+    width: 100%;
+  }
+  .phonepic{
+    display: none;
+  }
+
+ .mainbox {
+    padding-inline: 9%;
+    padding: 4rem 13vw;
+    width: 100%;
+    /* padding-inline: 65px; */
+    /* margin-inline: auto; */
+    /* padding: 52px; */
+    width: 100%;
+    align-items: center;
+    align-self: center;
+  }
+
+  .txt {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .txt > p {
+    width: 100%;
+  }
+
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+  h3{
+    line-height:48px ;
+    
+
+  }
+  .socialmedia .title {
+  white-space: normal;
+}
+  .socialmedia-card{
+    margin:5% 2%;
+
+   
+  }
+  .phonepic{
+    display: none;
+  }
+    .mainbox {
+    margin-inline: 2%;
+    padding: 5vw; /* 給一點內距，避免貼邊 */
+  }
+ 
 }

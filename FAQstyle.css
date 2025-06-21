@@ -3,7 +3,9 @@
         padding: 0;
         box-sizing: border-box;
       }
-
+html {
+  scroll-behavior: smooth;
+}
       body {
         margin: 0;
         background-color: #ffffe7;
@@ -357,7 +359,12 @@ li{
 .title{
     text-align: center;
 }
+.bgdog {margin: 0 auto;max-width: 1200px;}
 
+img.dogpic {
+    width: 100%;
+    border-radius: 32px;
+}
 @media screen and (max-width: 1440px) {
   
   .drawingLeaf{
@@ -380,12 +387,24 @@ section h3,section p{
   
     flex-direction: column;
 }
+.bgdog {
+  margin: 2%;
+  max-width: 1200px;
+}
+
 
 
 
 }
 
 @media screen and (max-width: 768px) {
+
+  body {
+ 
+        background-color: #ffffff;
+      }
+
+
   .drawingLeaf{
     display: none;
   }
@@ -418,15 +437,16 @@ section h3,section p{
       }
 
       .Btn span {
-        padding: 10px 0px;color: #fff;
+        color: #fff;
         align-items: center;   
       }
 .iconOrder, .iconOrderHover {
-    position: relative;
-    height: 24px;
-    transition: opacity 0.5s ease;
-    user-select: none;
-    pointer-events: none;
+            position: absolute;
+        left: 35%;
+        height: 24px;
+        transition: opacity 0.5s ease;
+        user-select: none;
+        pointer-events: none;
 }
       }
 

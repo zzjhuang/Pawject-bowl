@@ -210,12 +210,15 @@ input[type="checkbox"] {
   background-color: #fff;
   margin: 10% auto;
   padding: 20px;
-  width: 80%;
-  max-width:65vw;
+  width: 70%;
+  max-width:500px;
   border-radius: 32px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
   position: relative;
   animation: fadeIn 0.3s ease-in-out;
+}
+.modal-content img{
+  width: 100%;
 }
 
 /* 關閉按鈕 */
@@ -238,4 +241,23 @@ input[type="checkbox"] {
   to { opacity: 1; transform: translateY(0); }
 }
 
-
+@media screen and (max-width: 768px) {
+ 
+    .txt{
+    font-size: 1.1rem;
+  }
+  .icon{
+width: 50%;  }
+.information .text > div {
+  display: flex;
+  align-items: center;
+  margin-inline: 0;
+  width: 100%;
+}
+.divider{
+  display: none;
+}
+.personal-information{
+  margin: 0 2%;
+}
+}

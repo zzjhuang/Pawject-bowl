@@ -59,21 +59,42 @@
           </p>
           <div class="link">
             <div class="line">
-              加入我們的 LINE@
+              <span>加入我們的 LINE@</span>
               <div class="socialmedia-icon">
-                <img src="asset/icon/lineiconG.svg" alt="" />
+                <a
+                  class="responsive-link"
+                  data-href="https://www.line.me/tw/"
+                  href="https://www.line.me/tw/"
+                  target="_blank"
+                >
+                  <img src="asset/icon/lineiconG.svg" alt="" id="lineicon" />
+                </a>
               </div>
             </div>
             <div class="ig">
-              追蹤 Instagram
+              <span>追蹤 Instagram</span>
               <div class="socialmedia-icon">
-                <img src="asset/icon/igiconG.svg" alt="" />
+                <a
+                  class="responsive-link"
+                  data-href="https://www.instagram.com/"
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                >
+                  <img src="asset/icon/igiconG.svg" alt="" id="iqicon" />
+                </a>
               </div>
             </div>
             <div class="fb">
-              追蹤 Facebook
+              <span>追蹤 Facebook</span>
               <div class="socialmedia-icon">
-                <img src="asset/icon/fbiconG.svg" alt="" />
+                <a
+                  class="responsive-link"
+                  data-href="https://www.facebook.com"
+                  href="https://www.facebook.com"
+                  target="_blank"
+                >
+                  <img src="asset/icon/fbiconG.svg" alt="" id="fbicon" />
+                </a>
               </div>
             </div>
           </div>
@@ -81,7 +102,9 @@
         <div class="phonepic">
           <img src="asset/indexpic/phonepic.png" class="phone" alt="手機圖" />
           <div class="qrcode">
-            <img src="asset/icon/fbqrcode.jpg" alt="qrcode" />
+            <img src="asset/icon/lineqrcode.jpeg" alt="qrcode" id="line" />
+            <img src="asset/icon/igqrcode.jpeg" alt="qrcode" id="ig" />
+            <img src="asset/icon/fbqrcod.jpeg" alt="qrcode" id="fb" />
           </div>
         </div>
       </div>
@@ -115,5 +138,54 @@
 
     <script src="load-components.js"></script>
     <script src="revealElements.js"></script>
+    <script>
+      const qrcodes = {
+        lineicon: "line",
+        iqicon: "ig",
+        fbicon: "fb",
+      };
+
+      function toggleResponsiveLinks() {
+        const links = document.querySelectorAll(".responsive-link");
+        const isMobile = window.innerWidth <= 1280;
+
+        links.forEach((link) => {
+          const iconId = link.querySelector("img")?.id;
+          const showId = qrcodes[iconId];
+
+          // 先清除原本 click 事件（避免重複綁定）
+          link.replaceWith(link.cloneNode(true)); // 快速方式清掉事件（會導致動畫失效時可用另一種）
+
+          // 重新取得新 clone 的 link
+          const newLink = document.querySelector(`#${iconId}`).parentElement;
+
+          if (isMobile) {
+            // 手機裝置：保留 href，開啟連結
+            newLink.setAttribute("href", newLink.dataset.href);
+            newLink.style.pointerEvents = "auto";
+          } else {
+            // 桌機裝置：移除 href，綁定點擊顯示 QRCode
+            newLink.removeAttribute("href");
+            newLink.style.pointerEvents = "auto";
+
+            newLink.addEventListener("click", (e) => {
+              e.preventDefault();
+              // 隱藏所有 QRCode
+              Object.values(qrcodes).forEach((id) => {
+                document.getElementById(id).style.display = "none";
+              });
+
+              // 顯示對應 QRCode
+              if (showId) {
+                document.getElementById(showId).style.display = "block";
+              }
+            });
+          }
+        });
+      }
+
+      window.addEventListener("DOMContentLoaded", toggleResponsiveLinks);
+      window.addEventListener("resize", toggleResponsiveLinks);
+    </script>
   </body>
 </html>

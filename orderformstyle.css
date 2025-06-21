@@ -38,7 +38,7 @@
       /* 限制每行最多 5 個 */
       @media (min-width: 600px) {
         .time-slots {
-          grid-template-columns: repeat(5, 0fr);
+          grid-template-columns: repeat(5, 1fr);
         }
       }
 
@@ -56,7 +56,6 @@ font-size: 2rem;
 
 .mainbox{
   display: flex;
-  flex: row;
 }
 .knowhow{
   flex: 2;
@@ -196,4 +195,22 @@ input[type="button"]:hover,input[type="submit"]:hover{
   color: red;
   margin-left: 8px;
   font-size: 0.9rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .mainbox {
+    flex-direction: column;
+    margin: 3%;
+    
+  }
+  .sectitle {
+    text-align: center;
+  }
+  .banner ,.knowhowpic {
+    display: none;
+  }
+.drawingdog2{
+display: none;
+}
+
 }

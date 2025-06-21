@@ -23,6 +23,10 @@
         font-size: 1.2rem;;
 
       }
+ .header{
+          font-family: Jua, Arial, "Kiwi Maru", "Noto Sans TC" in !important;
+
+ }
 
       .bgimg {
         width: 100%;
@@ -63,6 +67,10 @@
         display: block;
         line-height: 0;
       }
+      .mask-img img {
+  width: 100%;
+  height: auto;
+}
 
       .heroBanner .text {
        position: absolute;
@@ -116,7 +124,7 @@
         position: absolute;
         top: 20px;
         right: 5%;
-        width: 200px;
+        width: 16%;
         height: auto;
         z-index: 0;
       }
@@ -128,47 +136,50 @@
       }
 
       .intro-banner .title {
-        font-size: 2.5vw;
+        font-size: 2.9vw;
         margin-bottom: 3.8rem;
         text-align: center;
         flex-wrap: wrap;
       }
 
-      .brandMessage .bimg {
-        width: 100%;
-        max-width: 1200px;
-        height: auto;
-        aspect-ratio: 1200 / 522.176;
-        border-radius: 32px;
-        overflow: hidden;
-      }
+  .brandMessage .bimg {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    aspect-ratio: 1200 / 522.176;
+    border-radius: 32px;
+    overflow: hidden;
+}
 
       .bimg img {
         width: 100%;
         display: block;
       }
 
-      .intro-aboutme {
-        display: flex;
-        flex: 1;
-        margin: 5% auto;
-        justify-content: center;
-        align-items: center;
-        width: 1200px;
-        gap: 20px;
+     .intro-aboutme {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
 
-        font-size: 100%;
-        font: inherit;
-        justify-content: space-around;
-        padding: 10px 0px;
-        vertical-align: baseline;
-      }
+  margin: 5% auto;
+  padding: 2%;
+  max-width: 1200px;
+  width: 100%;
+  font: inherit;
+}
+.intro-section {
+    width: 100%;
+    margin: auto;
+}
       h2 {
         font-size: 2rem;
         margin-bottom: 2rem;
       }
       .intro-txt .intro-img {
         padding-inline: 20px;
+        width: 100%;
       }
 
       .intro-aboutmeal {
@@ -179,13 +190,14 @@
         margin: 5% auto;
         justify-content: center;
         align-items: center;
-        width: 1200px;
+        width: 100%;
+        max-width: 1200px;
         gap: 20px;
 
         font-size: 100%;
         font: inherit;
         justify-content: space-around;
-        padding: 10px 0px;
+        padding: 2%;
         vertical-align: baseline;
       }
       .intro-img2 {
@@ -224,11 +236,32 @@
         pointer-events: none;
       }
 .intro-txt,.intro-txt2{
+  display: flex;
   padding-right:1vh;
   text-align: justify;
+  padding:10px;
+  flex-wrap: wrap;
 }
+  .intro-btn {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center; /* 垂直置中（如果你希望的話） */
+    width: 100%;
+    position: relative;
+  }
+  /* .readmoreBtn {
+  background-color: #8aba65;
+  border-radius: 32px;
+  padding: 10px 10px 10px 15px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: max-content;
+  z-index: 3;
+  font-size: 24px;
+  transition: transform 0.2s ease;} */
       .readmoreBtn {
-        margin-top: auto;
+        margin-top: 3vh;
         margin-left: auto;
         position: absolute;
         right: 0%;
@@ -246,6 +279,13 @@
           transition: transform 0.2s ease;
 
       }
+      .intro-txt {
+  flex: 1 1 ;  
+  /* max-width: 600px; */
+  word-break: break-word;
+  overflow-wrap: break-word;
+  box-sizing: border-box;
+}
     .intro-txt2>.readmoreBtn{
         bottom: 0;
 
@@ -311,7 +351,7 @@
       }
 
       .menucard-list {
-        width: 1200px;
+        max-width: 1200px;
         display: flex;
         justify-content: space-around;
         gap: 20px;
@@ -319,6 +359,7 @@
         margin-top: 5vh;
         margin-left: auto;
         margin-right: auto;
+        width: auto;
       }
 
       .menucard {
@@ -331,7 +372,11 @@
         transition: transform 0.3s ease;
         z-index: 3;
         background-color: #707070;
+        width: 100%;
+        height: auto;
       }
+
+      
 
       .menucard:hover {
         transform: translateY(-5px);
@@ -339,11 +384,20 @@
 
       .menu-card-img img {
         width: 100%;
-        height: auto;
-        display: block;
-        max-height: 330px;
+  height: 100%;
+  object-fit: cover; /* 這樣圖片會填滿容器但不變形 */
+  display: block;
       }
-
+.bkforphone{
+  display:none;
+  background-color:#70707054;
+  width: 100%;
+  height: auto;
+  z-index: 99;
+}
+.bkforphone p{
+  color: white;
+}
       .menu-card-txt {
         margin: 20px 0;
         font-size: 20px;
@@ -381,6 +435,7 @@
         z-index: 0;
         pointer-events: none;
         transform: rotate(15deg);
+        width: 100%;
       }
       .drawingC {
         position: absolute;
@@ -390,6 +445,7 @@
         pointer-events: none;
         top: 21vw;
       }
+     
 
       .dog-section {
         width: 100%;
@@ -446,6 +502,9 @@
         
         position: relative;
       }
+      .whitemask{
+        display: none;
+      }
       .drawingshiba {
         position: absolute;
         right: 0;
@@ -467,13 +526,15 @@
         padding: 5px;
       }
       .dogManager-item {
+          flex-wrap: wrap;
+
         display: flex;
         align-items: center;
         justify-content: center;
         margin: 3vh auto;
         width: 100%;
         padding: 10px;
-        height: 300px; /* åŠ ä¸Šé€™è¡Œï¼ */
+        height: 300px; 
       }
 
       .dogManager-img,
@@ -523,31 +584,260 @@
         justify-content: space-around;
           box-sizing: border-box;
       }
-@media screen and (max-width: 1024px) {
-  .dogcard {
-    flex: 1 1 45%;
-  }
-}
 
-@media screen and (max-width: 768px) {
-  .dogcard {
-    flex: 1 1 90%;
-  }
-}
+
    
       .photowall{
+         width: 100%;
          display: flex;
          justify-content: flex-end;
          width: 100%;
          max-width: 1920px;
-         padding: 0 2rem; 
-         box-sizing: border-box; 
-   margin-top: 4vh;      }
+         padding: 0 2rem;
+         box-sizing: border-box;
+         margin-top: 4vh;
+         z-index: 99;
+         align-items: center;
+  }
 
       .spcolor{
 color: #8aba65 !important;
 }
- .header{
-          font-family: Jua, Arial, "Kiwi Maru", "Noto Sans TC" in !important;
 
- }
+.bgcould{
+  z-index: 0;
+  transform: scaleY(-1);
+width: 100%;
+display: none;
+}
+.bgcould img{
+
+  display: block;
+  width: 100%;
+
+}
+@media screen and (max-width: 1440px) {
+ .drawingLeaf {
+    position: absolute;
+    top: -17%;
+    right: 12%;
+}
+
+.drawingKinoko{
+  display: none;
+}
+ .drawingshiba img,.drawingPaw2 img{
+        width: 100%; 
+      }
+      .drawingshiba{
+        width: 300px;
+      }
+.drawingPaw2{
+        width: 300px;
+        left: -1%;
+        bottom: -18%;
+    
+}
+}
+
+
+@media screen and (max-width: 1280px) {
+.drawingC,.drawingPaw{
+    display: none;
+  }
+
+  .menu-card-img img {
+        width: 100%;
+        height: auto;
+        display: block;
+        height: auto;
+      }
+  .video-mask{
+    display: none;
+  }
+  .dogcard-wraps {
+    display: none;
+  }     
+  .bgcould{
+  display: block;
+}
+.dogManager{
+  margin-top: 0;
+}
+.drawingshiba{
+  top:0;
+
+}
+.colormod-rg{
+  z-index: -1;
+}
+ .photowall {
+    
+    z-index: 99;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+}
+
+
+
+@media screen and (max-width: 1024px) {
+  .dogcard {
+    flex: 1 1 45%;
+  }
+    .intro-aboutme {
+    flex-direction: column;
+    align-items: center;
+  }
+  .intro-img{
+    display: none;
+  }
+  .intro-img2-right, .intro-img2-left {
+    width: 80%;
+    height: auto;
+    padding: 20px;
+    border-radius: 32px;
+    overflow: hidden;
+    position: relative;
+}
+.intro-aboutmeal {
+   
+    flex-direction: column;
+}
+      .menu-card-img img {
+        width: 100%;
+        height: auto;
+        display: block;
+        height: auto;
+      }
+       .menu-card {
+        width: 100%;
+ 
+      }
+      .drawingshiba{
+         top: -16%;
+        right: -3%;
+  
+      }
+      .dogManager-img{
+        flex:1;
+        padding: 2%;
+      }
+      
+      .dogManager-txt{
+        flex:2;
+        padding: 2%;
+
+      }
+       .drawingPaw2 {
+        width: 150px;
+        left: 0%;
+        bottom: -15%;}
+
+
+
+
+
+
+}
+
+
+ @media screen and (max-width: 768px) {
+  .mask-img img,.intro-img2-right,.intro-img2-left {
+    display: none;
+  }
+ .dogcard {
+    flex: 1 1 90%;
+  }
+  .mask-img img.whitemask {
+    display: block;
+  }
+  .menucard-list {
+  
+    flex-direction: column;
+}
+   .colormod-rg {
+display: none;      }
+
+  .menucard {
+    flex: 1;
+    max-width: 80%;
+    margin: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    transition: transform 0.3s ease;
+    z-index: 3;
+    background-color: #707070;
+    width: 100%;
+    height: auto;
+            max-height: 330px;
+
+}
+.menu-card-txt{
+  display: none;
+}
+.bkforphone{
+    display: flex; /* 用 flex 置中 */
+    justify-content: center; /* 水平置中 */
+    align-items: center; /* 垂直置中 */
+    position: absolute; /* 蓋在圖片上 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* 填滿圖片容器 */
+    background-color: rgba(121, 110, 110, 0.26); /* 半透明背景 */
+    z-index: 2;
+  }
+ .menu-card-img {
+    position: relative;
+     overflow: hidden;
+  height: 330px; /* 關鍵設定 */
+  }
+
+  .bkforphone h2 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom:0;
+  
+    /* letter-spacing: 2px; */
+  }
+.dogManager-item {
+    flex-wrap: nowrap;
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
+    margin: 3vh auto;
+    width: 100%;
+    padding: 10px;
+    height: 300px;
+    flex-direction: column;
+}
+.drawingPaw2,.bgcould,.drawingFish,.drawingshiba{
+  display: none;
+}
+}
+@media screen and (max-width: 430px) {
+  
+.colormod-ly,.colormod-rg{
+  display: none;
+}
+    .menucard {
+        flex: 1;
+        max-width: 80%;
+        margin: auto;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        text-align: center;
+        transition: transform 0.3s ease;
+        z-index: 3;
+        background-color: #707070;
+        width: 100%;
+        height: auto;
+        max-height: 188px;
+    }
+  }
