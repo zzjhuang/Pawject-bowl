@@ -12,10 +12,12 @@ html {
     top: 106vh;
     width: 100px;
 }
-.bgfoodright{
+
+ .bgfoodright {
     position: absolute;
     right: 0;
-    bottom: -87vh;
+    bottom: -13%;
+
 }
 .bgfoodleft img,.bgfoodright img{
     width: 320px;

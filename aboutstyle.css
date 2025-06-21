@@ -39,7 +39,7 @@
         color: #444;
         line-height: 1.5;
       }
-.txt{
+.main_text>.txt{
     margin-block: 3vh;
 }
       .txt p {

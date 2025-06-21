@@ -9,22 +9,28 @@
       href="https://fonts.googleapis.com/css2?family=Jua&family=Kiwi+Maru&display=swap"
       rel="stylesheet"
     />
-
-    <style>
+<style>
+   .header-link-order {
+        opacity: 0;
+      }
       * {
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
       }
-
+      body {
+        overflow-x: hidden;
+      }
       .header {
+        padding-top:1.5vh ;
+        box-shadow: brown;
+        background-color: rgba(255, 255, 255, 0.233);
+
         padding: 2vh;
         display: flex;
         width: 100%;
-        height: auto;
         align-items: center;
         justify-content: space-between;
-        margin: auto;
-        overflow-x: hidden;
         position: absolute;
         right: 0;
         top: 0;
@@ -36,61 +42,35 @@
       .right-link {
         flex: 1;
         display: flex;
-        flex-direction: row;
         justify-content: space-around;
       }
       .header * {
         color: #000;
         font-size: 24px;
-        font-style: normal;
-        margin: 0;
       }
-
       a {
+        /* border: 1px red solid; */
         text-decoration: none;
+        white-space: nowrap;
+        font-size: clamp(12px, 1.5vw, 20px);
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
-
-      .header-link-about,
-      .header-link-menu,
-      .header-link-doglist,
-      .header-link-faq,
-      .header-link-contact {
-        padding: 0 10px;
-        /* flex: 1; */
-      }
-
-      /* .header-link-about::after,
-      .header-link-menu::after,
-      .header-link-doglist::after,
-      .header-link-faq::after,
-      .header-link-contact::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        height: 2px;
-        width: 100%;
-        background-color: #333;
-        transform: scaleX(0);
-        transform-origin: left;
-        transition: transform 0.3s ease;
-      }
-      .header-link-about:hover::after,
-      .header-link-menu:hover::after,
-      .header-link-doglist:hover::after,
-      .header-link-faq:hover::after,
-      .header-link-contact:hover::after {
-        transform: scaleX(1);
-      } */
-
       .header-logo {
         padding: 0 15px;
+        max-width: 200px;
+        width: 100%;
       }
 
+      .header-logo img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
       .header-order-btn {
         position: fixed;
         right: 1vh;
-        top: 2.8vh;
+        top: 2vh;
         background-color: #8aba65;
         border-radius: 32px;
         padding: 10px 10px 10px 15px;
@@ -99,13 +79,12 @@
         cursor: pointer;
         width: max-content;
         z-index: 99999;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       }
-
       .header-order-btn span {
         padding-left: 30px;
         color: #fff;
       }
-
       .header-icon-order,
       .header-icon-order-hover {
         position: absolute;
@@ -114,38 +93,190 @@
         transform: translateY(-50%);
         width: 24px;
         height: 24px;
-        transition: opacity 0.5s ease;
+        /* transition: opacity 0.5s ease; */
         user-select: none;
         pointer-events: none;
       }
-
       .header-icon-order-hover {
         opacity: 0;
       }
-
-      .header-order-btn:hover {
-        background-color: #fcfcc7;
-      }
-
-      .header-order-btn:hover span {
+      .header-order-btn:hover span,
+      .header-orderbtn-mob:hover span {
         color: #7a6f46;
       }
-
+      .header-order-btn:hover,
+      .header-orderbtn-mob:hover {
+        background-color: #fcfcc7;
+      }
       .header-order-btn:hover .header-icon-order {
         opacity: 0;
       }
-
       .header-order-btn:hover .header-icon-order-hover {
         opacity: 1;
       }
-      .header-link-order {
+      .header-orderbtn-mob {
+        position: fixed;
+        right: 2.5vh;
+        top: 0.3vh;
+        background-color: #8aba65;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        z-index: 99999;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      }
+      .header-orderbtn-mob a {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+      .header-orderbtn-mob span {
+        color: white;
+      }
+      .header-orderbtn-mob .icon {
+        position: relative;
+        width: 24px;
+        height: 24px;
+      }
+
+      .header-orderbtn-mob:hover .header-icon-order {
         opacity: 0;
       }
-    </style>
+      .header-orderbtn-mob:hover .header-icon-order-hover {
+        opacity: 1;
+      }
+     .mobile-menu {
+     height: 30vh;
+     padding-inline: 10px;
+     border: 1px red solid;
+     display: none;
+     flex-direction: column;
+     align-items: center;
+     background: #ffffff;
+     position: absolute;
+     top: 80px;
+     left: 0px;
+     width: 100vh;
+     z-index: 999;
+}
+.hamburger {
+  position: fixed;
+  top: 20px;
+  left: 2.5vh;
+  width: 30px;
+  height: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 1001;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.hamburger span {
+  height: 4px;
+  background: #333;
+  border-radius: 2px;
+  transition: 0.4s;
+}
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+  background-color:#8aba65 ;
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+transform: rotate(-45deg) translate(7px, -8px);    background-color:#fcfcc7 ;
+
+}
+
+/* 全螢幕選單背景 */
+.overlay {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+background: rgb(33 32 28 / 80%);
+  backdrop-filter: blur(6px);
+  transition: top 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.overlay.active {
+  top: 0;
+  opacity: 1;
+  visibility: visible;
+}
+.menu ul {
+  list-style: none;
+  text-align: center;
+}
+.menu ul li {
+    margin: 40px 0;
+}
+
+.menu ul li a {
+  color: white;
+  font-size: 28px;
+  text-decoration: none;
+  transition: 0.2s;
+}
+.menu ul li a:hover {
+  color: #8aba65;
+}
+
+.hamburger{
+  display: none;
+}
+
+
+      @media screen and (max-width: 1280px) {
+        .header-orderbtn-mob {
+          display: flex;
+        }
+        .header-order-btn {
+          display: none;
+        }
+      }
+
+      @media screen and (max-width: 1024px) {
+        .hamburger{
+  display: flex;
+        }
+        .left-link,
+        .right-link {
+          display: none;
+        }
+    .mobile-menu.show {
+        padding: 20px;
+        display: flex;
+        gap: 10%;
+        /* border: 1px red solid; */
+        align-items: center;
+        justify-content: flex-start;
+    }
+      }
+      
+      
+</style>
   </head>
   <body>
     <div class="header">
-      <div class="left-link">
+      <!-- 漢堡（手機版顯示） -->
+<button id="menuToggle" class="hamburger">
+  <span></span><span></span><span></span>
+</button>
+      <!-- 導覽列 -->
+      <div class="left-link nav-links">
         <div class="header-link-about">
           <a href="about.html">關於 Pawject Bowl</a>
         </div>
@@ -154,18 +285,24 @@
           <a href="doglist.html">狗狗名單</a>
         </div>
       </div>
+
+      <!-- LOGO -->
       <div class="center-link">
         <div class="header-logo">
-          <a href="index.html"> <img src="asset/icon/logo.svg" alt="logo" /></a>
+          <a href="index.html"><img src="asset/icon/logo.svg" alt="logo" /></a>
         </div>
       </div>
-      <div class="right-link">
+
+      <!-- 右側導覽 -->
+      <div class="right-link nav-links">
         <div class="header-link-faq"><a href="FAQ.html">常見問題</a></div>
         <div class="header-link-contact">
           <a href="contact.html">聯絡我們</a>
         </div>
         <div class="header-link-order">立即預約</div>
       </div>
+
+      <!-- 桌機版預約按鈕 -->
       <div class="header-order-btn">
         <a href="ordr.html">
           <img src="asset/icon/Vector.png" class="header-icon-order" />
@@ -176,6 +313,35 @@
           <span>立即預約</span>
         </a>
       </div>
-    </div>
+
+      <!--  手機版預約按鈕（） -->
+      <div class="header-orderbtn-mob">
+        <a href="ordr.html">
+          <div class="icon">
+            <img src="asset/icon/Vector.png" class="header-icon-order" />
+            <img
+              src="asset/icon/Vector_hover.png"
+              class="header-icon-order-hover"
+            />
+          </div>
+          <span class="txt">預約</span>
+        </a>
+      </div>
+
+      <!-- 手機版選單 -->
+ 
+    <!-- 全螢幕選單（含背景遮罩與滑動動畫） -->
+<div id="overlay" class="overlay">
+  <nav class="menu" id="menu">
+    <ul>
+      <li><a href="about.html">關於 Pawject Bowl</a></li>
+      <li><a href="menu.html">菜單</a></li>
+      <li><a href="doglist.html">狗狗名單</a></li>
+      <li><a href="FAQ.html">常見問題</a></li>
+      <li><a href="contact.html">聯絡我們</a></li>
+    </ul>
+  </nav>
+</div>
+
   </body>
 </html>
