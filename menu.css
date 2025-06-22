@@ -288,6 +288,9 @@ font-size: 2rem;
     width: 100%;
     box-sizing: border-box;
   }
+  .m-list{
+          width: 80vw;
+  }
 }
 
      

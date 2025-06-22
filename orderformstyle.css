@@ -1,4 +1,186 @@
-  body {
+  .header-link-order {
+        opacity: 0;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        overflow-x: hidden;
+      }
+      .header {
+        box-shadow: brown;
+        background-color: white;
+        padding: 2vh;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 999;
+        font-family: Jua, Arial, "Kiwi Maru", "Noto Sans TC" !important;
+      }
+      .left-link,
+      .center-link,
+      .right-link {
+        flex: 1;
+        display: flex;
+        justify-content: space-around;
+      }
+      .header * {
+        color: #000;
+        font-size: 24px;
+      }
+      a {
+        /* border: 1px red solid; */
+        text-decoration: none;
+        white-space: nowrap;
+        font-size: clamp(12px, 1.5vw, 20px);
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .header-logo {
+        padding: 0 15px;
+        max-width: 200px;
+        width: 100%;
+      }
+
+      .header-logo img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+      .header-order-btn {
+        position: fixed;
+        right: 1vh;
+        top: 2.8vh;
+        background-color: #8aba65;
+        border-radius: 32px;
+        padding: 10px 10px 10px 15px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        width: max-content;
+        z-index: 99999;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      }
+      .header-order-btn span {
+        padding-left: 30px;
+        color: #fff;
+      }
+      .header-icon-order,
+      .header-icon-order-hover {
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        transform: translateY(-50%);
+        width: 24px;
+        height: 24px;
+        /* transition: opacity 0.5s ease; */
+        user-select: none;
+        pointer-events: none;
+      }
+      .header-icon-order-hover {
+        opacity: 0;
+      }
+      .header-order-btn:hover span,
+      .header-orderbtn-mob:hover span {
+        color: #7a6f46;
+      }
+      .header-order-btn:hover,
+      .header-orderbtn-mob:hover {
+        background-color: #fcfcc7;
+      }
+      .header-order-btn:hover .header-icon-order {
+        opacity: 0;
+      }
+      .header-order-btn:hover .header-icon-order-hover {
+        opacity: 1;
+      }
+      .header-orderbtn-mob {
+        position: fixed;
+        right: 2.5vh;
+        top: 2.8vh;
+        background-color: #8aba65;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        z-index: 99999;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      }
+      .header-orderbtn-mob a {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+      .header-orderbtn-mob span {
+        color: white;
+      }
+      .header-orderbtn-mob .icon {
+        position: relative;
+        width: 24px;
+        height: 24px;
+      }
+
+      .header-orderbtn-mob:hover .header-icon-order {
+        opacity: 0;
+      }
+      .header-orderbtn-mob:hover .header-icon-order-hover {
+        opacity: 1;
+      }
+     .mobile-menu {
+     height: 30vh;
+     padding-inline: 10px;
+     border: 1px red solid;
+     display: none;
+     flex-direction: column;
+     align-items: center;
+     background: #ffffff;
+     position: absolute;
+     top: 80px;
+     left: 0px;
+     width: 100vh;
+     z-index: 999;
+}
+.hamburger-btn{
+  display: none;
+}
+
+
+      @media screen and (max-width: 1280px) {
+        .header-orderbtn-mob {
+          display: flex;
+        }
+        .header-order-btn {
+          display: none;
+        }
+      }
+
+      @media screen and (max-width: 1024px) {
+        .hamburger-btn {
+          display: block;
+        }
+        .left-link,
+        .right-link {
+          display: none;
+        }
+    .mobile-menu.show {
+        padding: 20px;
+        display: flex;
+        gap: 10%;
+        /* border: 1px red solid; */
+        align-items: center;
+        justify-content: flex-start;
+    }
+      }
+      
+ body {
         font-family: sans-serif;
         line-height: 1.6;
         font-family: Arial, "思源黑體", "Noto Sans TC";
@@ -136,6 +318,12 @@ h3{
 input[type="submit"]{
   margin: 0 auto;
 
+}
+input:focus,
+select:focus {
+  outline: none;
+  border: 2px solid #8bc34a;
+  box-shadow: 0 0 0 2px #8bc34a;;
 }
 h4 {
     /* FONT-WEIGHT: 200; */

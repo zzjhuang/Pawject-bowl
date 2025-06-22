@@ -1,6 +1,5 @@
  document.querySelector('.AdoptionGuidelines').style.display = 'none';
   document.querySelector('.qual').style.display = 'none';
-  document.querySelector('.process').style.display = 'none';
 
 document.getElementById('faqbtn').addEventListener('click', function () {
   // 顯示 FAQ 區塊
@@ -9,7 +8,6 @@ document.getElementById('faqbtn').addEventListener('click', function () {
   // 隱藏其他區塊
   document.querySelector('.AdoptionGuidelines').style.display = 'none';
   document.querySelector('.qual').style.display = 'none';
-  document.querySelector('.process').style.display = 'none';
 });
 
 document.getElementById('Adoptbtn').addEventListener('click', function () {
@@ -19,7 +17,6 @@ document.getElementById('Adoptbtn').addEventListener('click', function () {
   // 隱藏其他區塊
   document.querySelector('.quelist').style.display = 'none';
   document.querySelector('.qual').style.display = 'none';
-  document.querySelector('.process').style.display = 'none';
 });
 
 
@@ -29,17 +26,7 @@ document.getElementById('qualbtn').addEventListener('click', function () {
 
   // 隱藏其他區塊
   document.querySelector('.quelist').style.display = 'none';
-  document.querySelector('.process').style.display = 'none';
   document.querySelector('.AdoptionGuidelines').style.display = 'none';
 });
 
 
-document.getElementById('processbtn').addEventListener('click', function () {
-  // 顯示 process 區塊
-  document.getElementById('process').style.display = 'block';
-
-  // 隱藏其他區塊
-  document.querySelector('.quelist').style.display = 'none';
-  document.querySelector('.qual').style.display = 'none';
-  document.querySelector('.AdoptionGuidelines').style.display = 'none';
-});

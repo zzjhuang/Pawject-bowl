@@ -165,7 +165,9 @@
 
 }
 
-
+.link span{
+  text-align: center;
+}
 /* @keyframes slideInFromLeft {
   0% {
     opacity: 0;
@@ -277,5 +279,8 @@ iframe {
     margin-inline: 2%;
     padding: 5vw; /* 給一點內距，避免貼邊 */
   }
- 
+ .section{
+  margin-inline: 8%;
+ }
+
 }

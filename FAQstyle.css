@@ -102,13 +102,16 @@ padding: 10px 10px 4px 15px;
 .information .divider hr{
   width: 100%;
 }
-.dogicon {
+ 
 
-position: absolute;
-margin-top: 0.5rem;
-height: auto;
-right: 0;
-bottom: 0vh
+.dogicon {
+    position: absolute;
+    margin-top: 0.5rem;
+    height: auto;
+    right: 0;
+    bottom: 0vh;
+    width: 14vw;
+
 }
 .divider {
     position: relative;
@@ -231,75 +234,36 @@ h3{
  z-index: 0;
  }
 
- .slider-container {
+ .card-carousel {
   position: relative;
-  width: 100%;
-  /* max-width: 1920px; */
-  margin: 0 auto;
-  overflow: hidden; /* ← 避免卡片溢出 */
-  border-radius: 20px;
-}
-
-.card-wrapper {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-  width: calc(100% * var(--card-count));
-    transition: transform 0.5s ;
-
-}
-.prev-btn, .next-btn {
- position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-  border: none;
-  font-size: 2rem;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  border-radius: 50%;
-  background: transparent;
-appearance: none;
-}
-
-.prev-btn {
-    left: 2vh;
-    width:8vh;
-    height: auto;
-    transform: translate(0%, -50%) rotate(270deg);
-    transition: transform 0.3s ease;
-}
-.prev-btn:hover{left: 1vh;transition: transform 0.5s ease;}
-.prev-btn img,.next-btn img{
-    width: 100%;
-}
-.next-btn {right: 2vh;width: 8vh;height: auto;transform: translate(-50%, -50%) rotate(90deg);transition: transform 0.3s ease;}   
-    
-.next-btn:hover{
-transition: transform 0.5s ease;
-right:1vh;
-
-  
-}
-
- .card{
-  display: flex;
   max-width: 1200px;
-  flex: 0 0 100%; /* 一張卡片顯示滿版 */
-  height: 100%;
-  background-color: white;
-  border-radius: 32px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  padding: 5vh;
-  margin-inline: auto;
-  margin-block: 2vh;
-  align-content: stretch;
-  gap: 1vw;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-    box-sizing: border-box;
+  margin: auto;
+}
 
- }
+.card {
+max-width: 1200px;
+  width: 80vw;
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 32px;
+  padding: 5vh;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  gap: 2vw;
+  margin: 0 auto;
+
+}
+
+.card.active {
+  display: flex;
+}
+
+.card-txt {
+  flex: 1;
+}
+
 .card-txt ul{
     
     display: flex;
@@ -309,21 +273,38 @@ li{
   font-size: 1.25rem;
   margin-block: 2vh;
 }
-.card h2 {
-    text-align: left;
-    margin-block: 0;
-    padding-block: 2vh;
-}
-.card-txt{
-  gap: 1vh;
-}
-.card-pic{
+.card-pic {
   max-width: 470px;
-  
+  flex: 1;
 }
-.card-pic img{
+
+.card-pic img {
   width: 100%;
-  height: auto;
+  border-radius: 8px;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 50px;
+}
+
+.carousel-btn.prev {
+  left: -30px;
+  transform: translateY(-50%) rotate(270deg);
+}
+
+.carousel-btn.next {
+  right: -30px;
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.carousel-btn img {
+  width: 100%;
 }
 
 .qualifications{
@@ -448,6 +429,21 @@ section h3,section p{
         user-select: none;
         pointer-events: none;
 }
-      }
+     .card {
+    flex-direction: column;
+}
+.carousel-btn{
+  display: none;
+}
+.Qicon img {
+    width: 23vh;
+    position: absolute;
+    left: -1vh;
+    top: 36vh;
+}
+
+
+
+}
 
     

@@ -12,6 +12,7 @@
 
       }
       h1,h2,h3,h4,.title{
+        line-height: 1.6;
  font-family: Jua, Arial, "Kiwi Maru", "Noto Sans TC";
  
       }
@@ -176,6 +177,7 @@
       h2 {
         font-size: 2rem;
         margin-bottom: 2rem;
+        line-height:1.6;
       }
       .intro-txt .intro-img {
         padding-inline: 20px;
@@ -522,7 +524,7 @@
         max-width: 1200px;
         z-index: 2;
       }
-      .dogManager.title{
+      .dogManager .title{
         padding: 5px;
         text-align: center;
       }
@@ -685,6 +687,17 @@ display: none;
 
 
 @media screen and (max-width: 1024px) {
+      .drawingLeaf {
+        position: absolute;
+        top: -29%;
+        right: 0%;
+    }
+  h1{
+    font-size:2rem;
+  }
+  h2{
+    font-size:1.6rem;
+  }
   .dogcard {
     flex: 1 1 45%;
   }
@@ -737,7 +750,9 @@ display: none;
         left: 0%;
         bottom: -15%;}
 
-
+.intro-txt,.intro-txt2,.dogManager-txt,.photowall-txt{
+  margin-inline: 8%;
+}
 
 
 
@@ -746,6 +761,9 @@ display: none;
 
 
  @media screen and (max-width: 768px) {
+  .masked-image {
+  
+    margin-top: 83px;}
   .mask-img img,.intro-img2-right,.intro-img2-left {
     display: none;
   }
@@ -838,7 +856,16 @@ display: none;      }
   }
 
 }
+@media screen and (max-width: 767px) {
+   .banner-img .text{
+    display: none;
+  }
+}
+ 
 @media screen and (max-width: 430px) {
+  .banner-img .text{
+    display: none;
+  }
   
 .colormod-ly,.colormod-rg{
   display: none;

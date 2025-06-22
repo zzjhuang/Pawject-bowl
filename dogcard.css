@@ -12,7 +12,6 @@
       }
       .dogcard:hover {
         transform: translateY(-5px);
-        border:2px solid #8ABA65;
 
       }
 

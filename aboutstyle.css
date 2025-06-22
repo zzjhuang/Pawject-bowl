@@ -227,4 +227,10 @@ position: absolute;
         .bgfoodright {
           display: none;
         }
+
+
+        .ourstory-items{
+            margin-inline: 8%;
+
+        }
       }

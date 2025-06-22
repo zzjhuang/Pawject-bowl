@@ -1,3 +1,5 @@
+
+
 .drawingPaw2 {
     position: absolute;
     left: 0;
@@ -12,9 +14,9 @@ position: absolute;
     top: 62vh;
     z-index: 0;
  }
- /* .bgcmod-03,.bgcmod-04{
+ .bgcmod-03,.bgcmod-04{
   display: none;
-} */
+}
  .hero-banner {
   width: 100%;
   overflow: hidden;
@@ -202,13 +204,13 @@ font-size: 2rem;
         object-fit: contain;
         z-index: 2;
   }
-  /* .bgcmod-03,.bgcmod-04{
+  .bgcmod-03,.bgcmod-04{
   display:block;
 }
 .drawingPaw2,.drawingdog2{
   display: none;
 }
-   */
+  
 } 
 
 /* 桌機以上維持原本的 Grid 或 Flex 排列 */
