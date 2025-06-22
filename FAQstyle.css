@@ -424,6 +424,7 @@ section h3,section p{
 .iconOrder, .iconOrderHover {
             position: absolute;
         left: 35%;
+                margin: 5px;
         height: 24px;
         transition: opacity 0.5s ease;
         user-select: none;
