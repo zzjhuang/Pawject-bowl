@@ -4,6 +4,12 @@
         padding: 0;
         box-sizing: border-box;
       }
+      .bgcolormod img {
+  max-width: 100vw;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
 
       body {
         margin: 0;
@@ -142,9 +148,9 @@ opacity: 0.6;
 
 
 }
-@media screen and (max-width: 430px) {
+/* @media screen and (max-width: 430px) {
       .bgcmod-04 {
       display: none;
       }
   
-}
+} */

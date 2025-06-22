@@ -1,59 +1,47 @@
-
-
 document.addEventListener('DOMContentLoaded', () => {
-
-  console.log('DOM loaded');
-
- 
- 
- 
- 
- 
- document.querySelector('.sala-menu').style.display = 'none';
-  document.querySelector('.drink-menu').style.display = 'none';
-  document.querySelector('.dog-menu').style.display = 'none';
-
-document.getElementById('menubtn').addEventListener('click', function () {
-  // 顯示 FAQ 區塊
-  document.querySelector('.main-menu').style.display = 'block';
-
-  // 隱藏其他區塊
   document.querySelector('.sala-menu').style.display = 'none';
   document.querySelector('.drink-menu').style.display = 'none';
   document.querySelector('.dog-menu').style.display = 'none';
-});
 
-document.getElementById('salabtn').addEventListener('click', function () {
-  // 顯示 Adopt 區塊
-  document.querySelector('.sala-menu').style.display = 'block';
+  document.querySelectorAll('.m-list li a').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
 
-  // 隱藏其他區塊
-  document.querySelector('.main-menu').style.display = 'none';
-  document.querySelector('.drink-menu').style.display = 'none';
-  document.querySelector('.dog-menu').style.display = 'none';
-});
+      const href = link.getAttribute('href');
+      const targetElement = document.querySelector(href);
 
+      // 切換區塊
+      if (href === '#menu') {
+        document.querySelector('.main-menu').style.display = 'block';
+        document.querySelector('.sala-menu').style.display = 'none';
+        document.querySelector('.drink-menu').style.display = 'none';
+        document.querySelector('.dog-menu').style.display = 'none';
+      } else if (href === '#sala') {
+        document.querySelector('.main-menu').style.display = 'none';
+        document.querySelector('.sala-menu').style.display = 'block';
+        document.querySelector('.drink-menu').style.display = 'none';
+        document.querySelector('.dog-menu').style.display = 'none';
+      } else if (href === '#drink') {
+        document.querySelector('.main-menu').style.display = 'none';
+        document.querySelector('.sala-menu').style.display = 'none';
+        document.querySelector('.drink-menu').style.display = 'block';
+        document.querySelector('.dog-menu').style.display = 'none';
+      } else if (href === '#dogfood') {
+        document.querySelector('.main-menu').style.display = 'none';
+        document.querySelector('.sala-menu').style.display = 'none';
+        document.querySelector('.drink-menu').style.display = 'none';
+        document.querySelector('.dog-menu').style.display = 'block';
+      }
 
-document.getElementById('drinkbtn').addEventListener('click', function () {
-  // 顯示 qual 區塊
-  document.querySelector('.drink-menu').style.display = 'block';
+      // 滾動控制
+      if (window.innerWidth <= 768 && targetElement) {
+        const offset = 80; // 根據你的 header 高度調整
+        const top = targetElement.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
 
-  // 隱藏其他區塊
-  document.querySelector('.main-menu').style.display = 'none';
-  document.querySelector('.sala-menu').style.display = 'none';
-  document.querySelector('.dog-menu').style.display = 'none';
-});
-
-
-document.getElementById('dogfoodbtn').addEventListener('click', function () {
-  // 顯示 process 區塊
-  document.querySelector('.dog-menu').style.display = 'block';
-
-  // 隱藏其他區塊
-  document.querySelector('.main-menu').style.display = 'none';
-  document.querySelector('.drink-menu').style.display = 'none';
-  document.querySelector('.sala-menu').style.display = 'none';
-});
-
-
+      // 更新網址 hash
+      history.pushState(null, null, href);
+    });
+  });
 });

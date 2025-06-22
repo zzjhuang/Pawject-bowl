@@ -1,35 +1,27 @@
-
-
-.slider-container {
-  display: flex;
-  align-items: baseline;
-  gap: 12px;
-  overflow: hidden;
-  padding: 20px;
-  max-width: 100%;
-
-}
-
-.nav-button {
-  font-size: 24px;
-  border: none;
-  background: transparent;
-  cursor: pointer;
-  z-index: 10;
+.thumbnail-wrapper {
+   overflow-x: auto;         /* ✅讓縮圖軌道能滑動 */
+   scroll-behavior: smooth;  /* ✅ 滑動時有平滑過渡 */
+   width: 100%;              /* ✅ 支援 RWD */
+   /* max-width: 400px; */         /* 或你需要的寬度 */
+   margin: 0 auto;           /* 水平置中 */
+   padding: 10px 0;
 }
 
 .thumbnail-track {
+  margin: 0 auto;
+  width: 90%;
   display: flex;
-  flex-direction: row;
   gap: 10px;
-  overflow: hidden;
-  max-width: 180px;
-  flex-shrink: 0;
+  transition: transform 0.3s ease;
+  padding: 5px 10px;
+  /* min-width: max-content; */ /* ✅ 防止縮圖被壓縮換行 */
+  align-items: center;
+  justify-content: center;
 }
 
 .thumb {
-  width: 80px;
-  height: 60px;
+  width: 65px;
+  height: auto;
   object-fit: cover;
   border-radius: 8px;
   opacity: 0.5;
@@ -43,27 +35,61 @@
   border: 2px solid #333;
   transform: scale(1.05);
 }
-
-.main-preview {
-  width: 480px;
-  height: 360px;
-  flex-shrink: 0;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-#mainImage {
+.main-preview{
+  position: relative;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  margin: 0 auto;
+  border-radius: 32px;
+  padding-inline: 3vh;
 }
-.photowall-txt{
-  flex: 1;
-  margin: auto 0;
-  color: #7A6F46;
+.main-preview img{
+  width: 100%;
+  overflow: hidden;
+  border-radius: 32px;
+  /* padding: 5vh; */
+  max-height: 415px;
 }
-.photowall-txt>p{
-  text-align: center;
-  padding-top: 1rem;
+.slider-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    flex: 1;
+    margin: 3vh;
+}
+
+.photowall-txt {
+    flex: 2;
+    text-align: center;
+}
+
+.nav-button {
+  all: unset; /* ✅ 一鍵清除瀏覽器預設樣式 */
+  cursor: pointer;
+  
+  padding: 0 10px;
+  user-select: none;
+}
+.nav-button img{
+  width: 45px;
+  
+}
+button.nav-button.left {
+    transform: rotate(270deg);
+}
+
+button.nav-button.right {
+    transform: rotate(90deg);
+}
+.nav-button.left img:hover {
+  transform: translateY(-5px);
+}
+.nav-button.right img:hover {
+  transform: translateY(-5px);
+}
+@media screen and (max-width: 768px) {
+  .nav-button,
+  .thumbnail-wrapper {
+    display: none;
+  }
 }

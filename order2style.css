@@ -260,4 +260,8 @@ width: 50%;  }
 .personal-information{
   margin: 0 2%;
 }
-}
+}@media screen and (max-width: 768px) {
+
+.bgfoodleft{
+  opacity: 0;
+}}

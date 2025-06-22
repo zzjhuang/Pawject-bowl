@@ -524,6 +524,7 @@
       }
       .dogManager.title{
         padding: 5px;
+        text-align: center;
       }
       .dogManager-item {
           flex-wrap: wrap;
@@ -558,9 +559,10 @@
         box-sizing: border-box;
       }
       .dogManager-img img {
-        width: auto;
-        height: 100%;
-        object-fit: cover;
+       max-height: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
       }
 
       .dogcard-wraps {
@@ -672,7 +674,7 @@ display: none;
   z-index: -1;
 }
  .photowall {
-    
+    display: flex;
     z-index: 99;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -794,7 +796,7 @@ display: none;      }
  .menu-card-img {
     position: relative;
      overflow: hidden;
-  height: 330px; /* 關鍵設定 */
+  height: 280px; /* 關鍵設定 */
   }
 
   .bkforphone h2 {
@@ -813,12 +815,28 @@ display: none;      }
     margin: 3vh auto;
     width: 100%;
     padding: 10px;
-    height: 300px;
+    height: auto;
     flex-direction: column;
 }
 .drawingPaw2,.bgcould,.drawingFish,.drawingshiba{
   display: none;
 }
+  .dogManager {
+    flex-direction: column;
+    margin-block: 10vh;
+  }
+
+  .dogManager-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .dogManager-img img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
 }
 @media screen and (max-width: 430px) {
   

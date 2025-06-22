@@ -180,7 +180,8 @@
         <img src="asset/bgdrawing/drawingShiba.png" alt="" />
       </div>
       <div class="dogManager reveal">
-        <div class="title"><h2>本月狗店長</h2></div>
+        <div class="title"><h2>本月狗店長</h2>
+        </div>
 
         <div class="dogManager-item">
           <div class="dogManager-img">
@@ -200,6 +201,8 @@
             </div>
           </div>
         </div>
+
+        
         <div class="drawingPaw2 reveal">
           <img src="asset/bgdrawing/drawingPaw2.png" alt="" />
         </div>
@@ -280,23 +283,21 @@
       </div>
     </section>
     <section class="photowall reveal">
-      <div class="slider-container">
-        <button class="nav-button left">&#8249;</button>
+   <div class="slider-container">
+  <button class="nav-button left"><img src="asset/icon/Paw.png"></button>
+<div class="preview">
+  <div class="main-preview">
+    <img id="mainImage" src="asset/indexpic/dogpw01.webp" alt="主圖" />
+  </div>
 
-        <div class="thumbnail-track left-thumbs" id="leftThumbs">
-          <!-- 左側縮圖 -->
-        </div>
-
-        <div class="main-preview">
-          <img id="mainImage" src="asset/indexpic/dogpw01.webp" alt="主圖" />
-        </div>
-
-        <div class="thumbnail-track right-thumbs" id="rightThumbs">
-          <!-- 右側縮圖 -->
-        </div>
-
-        <button class="nav-button right">&#8250;</button>
-      </div>
+  <div class="thumbnail-wrapper">
+    <div class="thumbnail-track" id="thumbTrack">
+      <!-- 縮圖將由 JS 動態生成 -->
+    </div>
+  </div>
+</div>
+  <button class="nav-button right"><img src="asset/icon/Paw.png"></button>
+</div>
       <div class="photowall-txt">
         <h2>
           "Every rescue has a story. Every photo holds a

@@ -12,9 +12,9 @@ position: absolute;
     top: 62vh;
     z-index: 0;
  }
- .bgcmod-03,.bgcmod-04{
+ /* .bgcmod-03,.bgcmod-04{
   display: none;
-}
+} */
  .hero-banner {
   width: 100%;
   overflow: hidden;
@@ -67,12 +67,7 @@ position: absolute;
 
 }
 
-.yellowmask {
-  display: block;
-}
-.whitemask {
-  display: none;
-}
+
 
 .dogcard-wraps {
         width: 100%;
@@ -182,7 +177,7 @@ font-size: 2rem;
     display: block;
   }
   .yellowmask{
-    display: none;
+    display: none !important;
   }
   .whitemask{
     display: block;
@@ -207,13 +202,13 @@ font-size: 2rem;
         object-fit: contain;
         z-index: 2;
   }
-  .bgcmod-03,.bgcmod-04{
+  /* .bgcmod-03,.bgcmod-04{
   display:block;
 }
 .drawingPaw2,.drawingdog2{
   display: none;
 }
-  
+   */
 } 
 
 /* 桌機以上維持原本的 Grid 或 Flex 排列 */
@@ -229,12 +224,24 @@ font-size: 2rem;
         flex-wrap: wrap;
         width: 100%;
     
+}
+  .main-video {
+    display: block !important;
   }
-
+  .mobile-image {
+    display: none !important;
+  }
+  .yellowmask {
+    display: block !important;
+  }
+  .whitemask {
+    display: none !important;
+  }
+}
 .dogcard{
   flex: 1 1 300px;
         width: 100%;
         max-width: 330px;
 }
-}
+
   
