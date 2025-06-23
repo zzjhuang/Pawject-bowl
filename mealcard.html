@@ -1,0 +1,140 @@
+<style>
+  .modal {
+    display: flex;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .modal-card {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    width: 70%;
+    max-width: 500px;
+    border-radius: 32px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+    text-align: center;
+  }
+
+  .modal-pic {
+    flex: 1;
+    width: 100%;
+  }
+
+  .modal-txt-item {
+    display: flex;
+    flex: 1;
+    gap: 15px;
+    flex-direction: column;
+  }
+
+  img {
+    max-width: 400px;
+  }
+  .modal-content {
+    position: relative;
+  }
+
+  .bone {
+    position: absolute;
+    right: 0;
+    top: 44vh;
+  }
+  .vgt {
+    position: absolute;
+    left: -53px;
+    top: 19px;
+    transform: scaleX(-1);
+  }
+  img.bone,
+  img.vgt {
+    max-width: 200px;
+    width: 100%;
+  }
+
+  div#modal {
+    margin: auto;
+    width: 100%;
+    /* padding: 2px; */
+  }
+  .close {
+    position: absolute;
+    right: -7%;
+    top: -4%;
+    width: 30px;
+    height: auto;
+  }
+
+  .close:hover {
+    transform: translateY(-5px);
+  }
+</style>
+
+<!-- Modal 彈出卡片 -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <div class="drawing">
+      <img src="asset/bgdrawing/drawingbone.png" alt="骨頭圖案" class="bone" />
+      <img src="asset/bgdrawing/drawingvgt.svg" alt="生菜圖案" class="vgt" />
+    </div>
+    <span class="close" id="closeModal"
+      ><img src="asset/icon/X.png" alt=""
+    /></span>
+    <div class="modal-card">
+      <div class="modal-pic">
+        <img src="asset/meal list/五彩食蔬烘蛋碗.png" alt="" />
+      </div>
+      <div class="modal-txt-item">
+        <div class="modal-txt">
+          <h3>嫩煎雞胸輕食盒</h3>
+          <span>熱量：約 420 大卡</span><span>蛋白質：約 38g</span>
+          <p>嫩煎雞胸、蒸花椰菜、溏心蛋與糙米飯的經典高蛋白組合，減脂首選</p>
+          <hr />
+        </div>
+        <div class="modal-txt2">
+          <p>
+            簡單調味的雞胸以少油嫩煎，保留原味與水分，搭配富含纖維的花椰與低 GI
+            糙米飯，是控制血糖、增加飽足感的完美組合。溏心蛋增添口感與好脂肪，是健身族群的便當首選。
+          </p>
+        </div>
+        <div class="modal-txt3">
+          <span>內容物:</span>
+          <span>嫩煎雞胸 、當季食蔬、溏心蛋、糙米飯 </span>
+          <hr />
+          <span>特色亮點：</span>
+          <span>減脂首選 不含豬肉 不含牛肉 </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <script>
+  // 彈出的小卡
+  const showModalBtn = document.getElementById("showModal");
+  const modal = document.getElementById("modal");
+  const closeModalBtn = document.getElementById("closeModal");
+
+  showModalBtn.addEventListener("click", function (e) {
+    e.preventDefault(); // 阻止超連結跳轉
+    modal.style.display = "block";
+  });
+
+  closeModalBtn.addEventListener("click", function () {
+    modal.style.display = "none";
+  });
+
+  // 點擊 modal 背景時關閉
+  window.addEventListener("click", function (e) {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+  //
+</script> -->

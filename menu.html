@@ -8,6 +8,7 @@
     <link href="reveal.css" rel="stylesheet" />
 
     <link href="menu.css" rel="stylesheet" />
+    <link href="mealcard.css" rel="stylesheet">
     <link href="bgmod.css" rel="stylesheet" />
     <style>
       body {
@@ -91,20 +92,21 @@
 
     <section class="main-menu reveal" id="menu">
       <div class="card-list">
-        <div class="card">
+        <a href="#" class="card" id="show-modal-m01">
           <img
             src="asset/meal list/香檸鮭魚蔬菜碗.png"
             alt="香檸鮭魚蔬菜碗"
             class="card-image"
           />
           <div class="card-content">
-            <h3 class="card-title">椒香舒肥雞胸沙拉</h3>
+            <h3 class="card-title">香檸鮭魚蔬菜碗</h3>
             <p class="card-desc">
-              使用低溫舒肥雞胸，保留高蛋白與嫩口口感，搭配胡椒油醋醬，低脂高飽足，適合運動後補充能量。
+                富含Omega-3的不飽和脂肪酸，搭配檸檬提香解膩，結合多樣時蔬，營養均衡、抗發炎、助心血管健康。
+
             </p>
           </div>
-        </div>
-        <div class="card">
+        </a>
+        <a href="#" class="card" id="show-modal-m02">
           <img
             src="asset/meal list/五彩食蔬烘蛋碗.png"
             alt="五彩食蔬烘蛋碗"
@@ -114,13 +116,13 @@
             <h3 class="card-title">五彩食蔬烘蛋碗</h3>
             <p class="card-desc">
               蛋白質豐富，搭配多種彩色蔬菜，補充纖維與植化素，低碳高飽足，是維持體態的好選擇。
-              健康。
+            
             </p>
           </div>
-        </div>
-        <div class="card">
+        </a>
+        <a href="#" class="card" id="show-modal-m03">
           <img
-            src="asset/meal list/味噌杏包菇蔬菜碗.png"
+            src="asset/meal list/日式味噌雞腿能量盒.jpg"
             alt="日式味噌雞腿能量盒"
             class="card-image"
           />
@@ -130,8 +132,8 @@
               高蛋白、低脂（去皮）、含發酵食品味噌有助腸道健康。
             </p>
           </div>
-        </div>
-        <div class="card">
+        </a>
+        <a href="#" class="card" id="show-modal-m04">
           <img
             src="asset/meal list/低醣鯛魚花椰菜飯.png"
             alt="低醣鯛魚花椰菜飯"
@@ -143,8 +145,8 @@
               高蛋白低醣，採用花椰菜米取代白飯，搭配優質鯛魚，穩定血糖、減脂不餓肚，是控醣飲食首選。
             </p>
           </div>
-        </div>
-        <div class="card">
+        </a>
+        <a href="#" class="card" id="show-modal-m05">
           <img
             src="asset/meal list/味噌杏包菇蔬菜碗.png"
             alt="味噌杏包菇蔬菜碗"
@@ -156,9 +158,9 @@
               低脂高纖，味噌富含益生菌，杏包菇提供植物性蛋白與飽足感，促進腸道健康又具日式風味。
             </p>
           </div>
-        </div>
+        </a>
 
-        <div class="card">
+        <a href="#" class="card" id="show-modal-m06">
           <img
             src="asset/meal list/椒鹽雞胸地瓜便當.png"
             alt="椒鹽雞胸地瓜餐盒"
@@ -170,7 +172,7 @@
               低脂高蛋白，雞胸肉簡單調味保留原味，搭配慢消化碳水的地瓜，提供持久能量與飽足感，適合健身或控制體重飲食。
             </p>
           </div>
-        </div>
+        </a>
       </div>
     </section>
 
@@ -384,6 +386,214 @@
       </div>
     </section>
 
+
+<!-- Modal 彈出卡片 -->
+<div id="modal1" class="modal">
+    <div class="modal-card">
+      <span class="vgt"><img src="asset/bgdrawing/vegt.png" alt=""></span>
+      <span class=" closeModal"  
+      ><img src="asset/icon/X.png" alt=""
+    /></span>
+      <div class="modal-pic">
+        <img src="asset/meal list/香檸鮭魚蔬菜碗.png" alt="" />
+      </div>
+      <div class="modal-txt-item">
+  <div class="modal-txt">
+    <h3 class="modal-card-title">香檸鮭魚蔬菜碗</h3>
+    <span>熱量：約 480 大卡</span><span>蛋白質：約 35g</span>
+    <p>富含Omega-3的不飽和脂肪酸，搭配檸檬提香解膩，結合多樣時蔬，營養均衡、抗發炎、助心血管健康。</p>
+    <hr />
+  </div>
+  <div class="modal-txt2">
+    <p>
+      鮭魚富含優質脂肪與蛋白質，檸檬清香去腥解膩，搭配豐富蔬菜與少量碳水，讓整體熱量控制得宜，適合追求均衡營養又想控制脂肪的你。
+    </p>
+  </div>
+  <div class="modal-txt3">
+    <span>內容物:</span>
+    <span>鮭魚、檸檬、多樣時蔬、地瓜或藜麥</span>
+    <hr />
+    <span>特色亮點：</span>
+    <span>含Omega-3、抗發炎、心血管友善</span>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+<!-- 第二張 -->
+<div id="modal2" class="modal">
+    <div class="modal-card">
+      <span class="vgt"><img src="asset/bgdrawing/vegt.png" alt=""></span>
+      <span class=" closeModal"  
+      ><img src="asset/icon/X.png" alt=""
+    /></span>
+      <div class="modal-pic">
+        <img src="asset/meal list/五彩食蔬烘蛋碗.png" alt="" />
+      </div>
+      <div class="modal-txt-item">
+  <div class="modal-txt">
+    <h3 class="modal-card-title">五彩食蔬烘蛋碗</h3>
+    <span>熱量：約 400 大卡</span><span>蛋白質：約 30g</span>
+    <p>蛋白質豐富，搭配多種彩色蔬菜，補充纖維與植化素，低碳高飽足，是維持體態的好選擇。</p>
+    <hr />
+  </div>
+  <div class="modal-txt2">
+    <p>
+      採用蛋白質含量高的烘蛋為主食，加入紅椒、花椰、南瓜等多種彩色蔬菜，提供植化素與膳食纖維，飽足感佳，適合忙碌又想吃得健康的日子。
+    </p>
+  </div>
+  <div class="modal-txt3">
+    <span>內容物:</span>
+    <span>雞蛋、彩色蔬菜（紅椒、綠花椰、南瓜等）</span>
+    <hr />
+    <span>特色亮點：</span>
+    <span>低碳高纖、蛋奶素可食、飽足耐餓</span>
+  </div>
+</div>
+
+    </div>
+  </div>
+</div>
+<!-- 第三張 -->
+ <div id="modal3" class="modal">
+    <div class="modal-card">
+      <span class="vgt"><img src="asset/bgdrawing/vegt.png" alt=""></span>
+      <span class=" closeModal"  
+      ><img src="asset/icon/X.png" alt=""
+    /></span>
+      <div class="modal-pic">
+        <img src="asset/meal list/日式味噌雞腿能量盒.jpg" alt="" />
+      </div>
+     <div class="modal-txt-item">
+  <div class="modal-txt">
+    <h3 class="modal-card-title">日式味噌雞腿能量盒</h3>
+    <span>熱量：約 510 大卡</span><span>蛋白質：約 40g</span>
+    <p>高蛋白、低脂（去皮）、含發酵食品味噌有助腸道健康。</p>
+    <hr />
+  </div>
+  <div class="modal-txt2">
+    <p>
+      使用去皮雞腿肉，以日式味噌醃製入味，提升風味又保有營養。搭配溫蔬菜與糙米飯，提升飽足感，同時透過味噌的益菌調節腸道，是健康便當好選擇。
+    </p>
+  </div>
+  <div class="modal-txt3">
+    <span>內容物:</span>
+    <span>去皮雞腿、味噌醬、溫野菜、糙米飯</span>
+    <hr />
+    <span>特色亮點：</span>
+    <span>發酵食品、腸道友善、高蛋白低脂</span>
+  </div>
+</div>
+
+    </div>
+  </div>
+</div>
+<!-- 第四張 -->
+  <div id="modal4" class="modal">
+    <div class="modal-card">
+      <span class="vgt"><img src="asset/bgdrawing/vegt.png" alt=""></span>
+      <span class=" closeModal"  
+      ><img src="asset/icon/X.png" alt=""
+    /></span>
+      <div class="modal-pic">
+        <img src="asset/meal list/低醣鯛魚花椰菜飯.png" alt="" />
+      </div>
+ <div class="modal-txt-item">
+  <div class="modal-txt">
+    <h3 class="modal-card-title">低醣鯛魚花椰菜飯</h3>
+    <span>熱量：約 360 大卡</span><span>蛋白質：約 35g</span>
+    <p>高蛋白低醣，採用花椰菜米取代白飯，搭配優質鯛魚，穩定血糖、減脂不餓肚，是控醣飲食首選。</p>
+    <hr />
+  </div>
+  <div class="modal-txt2">
+    <p>
+      選用低脂肪的鯛魚與富含纖維的花椰菜米，打造清爽低醣便當。對於想減脂、控醣的人來說，是提升蛋白質攝取、減少碳水的絕佳選擇。
+    </p>
+  </div>
+  <div class="modal-txt3">
+    <span>內容物:</span>
+    <span>鯛魚、花椰菜米、炒蛋、綠色時蔬</span>
+    <hr />
+    <span>特色亮點：</span>
+    <span>低醣高蛋白、穩糖飽足、無麩質友善</span>
+  </div>
+</div>
+
+
+    </div>
+  </div>
+</div>
+<!-- 第五張 -->
+   <div id="modal5" class="modal">
+    <div class="modal-card">
+      <span class="vgt"><img src="asset/bgdrawing/vegt.png" alt=""></span>
+      <span class=" closeModal"  
+      ><img src="asset/icon/X.png" alt=""
+    /></span>
+      <div class="modal-pic">
+        <img src="asset/meal list/味噌杏包菇蔬菜碗.png" alt="" />
+      </div>
+<div class="modal-txt-item">
+  <div class="modal-txt">
+    <h3 class="modal-card-title">味噌杏包菇蔬菜碗</h3>
+    <span>熱量：約 380 大卡</span><span>蛋白質：約 18g</span>
+    <p>低脂高纖，味噌富含益生菌，杏包菇提供植物性蛋白與飽足感，促進腸道健康又具日式風味。</p>
+    <hr />
+  </div>
+  <div class="modal-txt2">
+    <p>
+      使用天然發酵味噌簡單調味，搭配香氣十足的杏包菇與多種蔬菜，低熱量卻能提升飽足感，是腸道友善又具東方風味的輕食選擇。
+    </p>
+  </div>
+  <div class="modal-txt3">
+    <span>內容物:</span>
+    <span>杏包菇、味噌、時蔬、藜麥或糙米</span>
+    <hr />
+    <span>特色亮點：</span>
+    <span>發酵食品、植物性蛋白、素食可選</span>
+  </div>
+</div>
+
+    </div>
+  </div>
+</div>
+
+<!-- 第六章 -->
+
+   <div id="modal6" class="modal">
+    <div class="modal-card">
+      <span class="vgt"><img src="asset/bgdrawing/vegt.png" alt=""></span>
+      <span class=" closeModal" 
+      ><img src="asset/icon/X.png" alt=""
+    /></span>
+      <div class="modal-pic">
+        <img src="asset/meal list/椒鹽雞胸地瓜便當.png" alt="" />
+      </div>
+<div class="modal-txt-item">
+  <div class="modal-txt">
+    <h3 class="modal-card-title">椒鹽雞胸地瓜餐盒</h3>
+    <span>熱量：約 420 大卡</span><span>蛋白質：約 36g</span>
+    <p>低脂高蛋白，雞胸肉簡單調味保留原味，搭配慢消化碳水的地瓜，提供持久能量與飽足感，適合健身或控制體重飲食。</p>
+    <hr />
+  </div>
+  <div class="modal-txt2">
+    <p>
+      嚴選去皮雞胸肉以椒鹽簡約調味，低油低鈉，適合日常健身族。搭配天然甜味與高纖維的地瓜，穩定血糖、提升續航力，維持體態也能吃得滿足。
+    </p>
+  </div>
+  <div class="modal-txt3">
+    <span>內容物:</span>
+    <span>雞胸肉、地瓜、水煮蛋、季節蔬菜</span>
+    <hr />
+    <span>特色亮點：</span>
+    <span>健身推薦、無加工、升糖指數低</span>
+  </div>
+</div>
+
+
+    </div>
+  </div>
+</div>
     <div id="footer-container"></div>
     <script src="hambuger.js"></script>
 
@@ -391,5 +601,36 @@
     <script src="revealElements.js"></script>
     <script src="menubtn.js"></script>
     <!-- <script src="noscroll.js"></script> -->
+     <script>
+      // 共用 modal 開啟按鈕
+for (let i = 1; i <= 6; i++) {
+  const showBtn = document.getElementById(`show-modal-m0${i}`);
+  const modal = document.getElementById(`modal${i}`);
+
+  if (showBtn && modal) {
+    showBtn.addEventListener("click", function (e) {
+      e.preventDefault(); // 阻止連結跳轉
+      modal.style.display = "flex";
+    });
+
+    // 點背景關閉
+    window.addEventListener("click", function (e) {
+      if (e.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  }
+}
+
+// 共用 modal 關閉按鈕（使用 class 名稱 closeModal）
+const closeButtons = document.querySelectorAll(".closeModal");
+closeButtons.forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    const modal = btn.closest(".modal"); // 找到最近的 modal 父層
+    if (modal) modal.style.display = "none";
+  });
+});
+
+     </script>
   </body>
 </html>
