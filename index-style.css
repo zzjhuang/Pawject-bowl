@@ -8,6 +8,7 @@
         margin: 0;
         background-color: #ffffe7;
         overflow-x: hidden;
+        padding-top: 80px;
        
 
       }
@@ -493,6 +494,13 @@
         object-fit: cover; 
         display: block;
       }
+      .runningdog-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 100vh;
+  object-fit: cover;
+}
 
       .video-mask {
         max-height: 50vh;

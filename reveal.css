@@ -27,3 +27,9 @@ transition-delay: 0.3s;
     transition: none !important;
   }
 } */
+
+.reveal {
+  opacity: 1 !important;
+  transform: none !important;
+  visibility: visible !important;
+}

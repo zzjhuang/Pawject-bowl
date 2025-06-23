@@ -13,6 +13,11 @@ document.addEventListener('DOMContentLoaded', () => {
       headerContainer.innerHTML = data;
       bindHamburger(); // 確保 header 載入完成後才綁定事件
     });
+    window.addEventListener('DOMContentLoaded', () => {
+  setTimeout(() => {
+    window.scrollTo(0, 0);
+  }, 50);
+});
 });
 
 function bindHamburger() {
@@ -35,17 +40,16 @@ fetch('footer.html')
   .then(data => {
     document.getElementById('footer-container').innerHTML = data;
 
-    // 延遲一點時間再綁定，確保 DOM 已渲染
-    setTimeout(() => {
-      const topIcon = document.querySelector('.footer-top-icon');
-      if (topIcon) {
-        topIcon.addEventListener('click', () => {
-          window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-          });
-        });
-      }
-    }, 0);
+setTimeout(() => {
+  const topIcons = document.querySelectorAll('.footer-top-icon');
+  topIcons.forEach(icon => {
+    icon.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  });
+}, 0);
   });
 
