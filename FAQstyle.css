@@ -191,6 +191,9 @@ font-size: 2rem;
          text-align: justify;
 
 }
+.q img,.a img{
+  width: 30px;
+}
 .a p{
   padding-right: 3%;
 }
@@ -400,10 +403,10 @@ section h3,section p{
     }
    
       .Btn {
+    
         padding: 0.5vh;
         font-size: 24px;
         text-align: center;
-        
         background-color: #8aba65;
         border-radius: 32px;
         display: flex;
@@ -415,7 +418,9 @@ section h3,section p{
         justify-content: center;
         padding-left: 3vh;
         transition: transform 0.2s ease;
-      }
+    }
+}
+     
 
       .Btn span {
         color: #fff;
@@ -423,15 +428,19 @@ section h3,section p{
       }
 .iconOrder, .iconOrderHover {
             position: absolute;
-        left: 35%;
-                margin: 5px;
-        height: 24px;
-        transition: opacity 0.5s ease;
-        user-select: none;
-        pointer-events: none;
+            left: 35%;
+            margin: 5px;
+            height: 24px;
+            transition: opacity 0.5s ease;
+            user-select: none;
+            pointer-events: none;
 }
      .card {
     flex-direction: column;
+        padding: 3vw;
+    text-align: justify;
+
+
 }
 .carousel-btn{
   display: none;
@@ -442,9 +451,16 @@ section h3,section p{
     left: -1vh;
     top: 36vh;
 }
-
-
+h3,p{
+  margin-bottom: 2px !important;
+        letter-spacing: 1px!important;
+        line-height: 2rem !important;
+        font-family: Jua, Arial, "思源黑體", "Noto Sans TC";
+        font-size: 1.25rem; 
 
 }
+
+
+
 
     
