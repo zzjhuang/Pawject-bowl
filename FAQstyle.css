@@ -419,6 +419,13 @@ section h3,section p{
         padding-left: 3vh;
         transition: transform 0.2s ease;
     }
+    .card {
+    flex-direction: column;
+        padding: 3vw;
+    text-align: justify;}
+
+    .carousel-btn{
+  display: none;
 }
      
 
@@ -435,15 +442,10 @@ section h3,section p{
             user-select: none;
             pointer-events: none;
 }
-     .card {
-    flex-direction: column;
-        padding: 3vw;
-    text-align: justify;
-
+     
 
 }
-.carousel-btn{
-  display: none;
+
 }
 .Qicon img {
     width: 23vh;
